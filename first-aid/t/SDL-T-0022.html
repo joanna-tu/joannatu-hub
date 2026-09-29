@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change the channel · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C1">Stall: silent, cause unknown</a></div>
+  <h1 class="serif">Change the channel</h1>
+  <p class="short">Send the same message another way, once: a call, a voice note, a handwritten card, a visit. People respond to effort they can see. Nobody has tested whether automated effort counts.</p>
+  <div class="evid"><b>Evidence: studies from another field.</b> Studies in other fields, such as psychology or negotiation, back it. The library applies them to sales.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>Three emails, no reply. Whatever you put in the fourth, it lands in the same inbox as the first three.</p>
+<p>Send the same message another way, once: a phone call, a voice note, a LinkedIn message, a short handwritten card, a visit if you are nearby. Keep the words. What changes is how much effort the buyer can see behind them.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://salesmotion.io/blog/how-to-win-back-ghosted-leads" target="_blank" rel="noopener">Salesmotion's win-back sequence</a>.</b> Day 7, a follow-up that gives the buyer something useful, such as a case study. Day 14, a different channel: a call, or a LinkedIn message if email has failed. Day 21, a short message built on what the buyer said they needed. Day 30, the breakup email. The change of channel is a planned step in the sequence, not a last resort.</p>
+<p><b><a href="https://myscp.onlinelibrary.wiley.com/doi/abs/10.1207/s15327663jcp1503_8" target="_blank" rel="noopener">The note in Garner's experiments</a>.</b> A short handwritten request on a sticky note, stuck to the front of a survey, asking the person to fill it in. The same words handwritten on the cover letter did less well, and so did a blank sticky note. It took the note and the words together.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has tested it on a stalled deal.</b> The sales evidence is vendor figures with no comparison group.</p>
+<p><b>The vendor figures, and who publishes them.</b> <a href="https://www.vidyard.com/press-releases/sales-teams-using-video-increase-response-rates/" target="_blank" rel="noopener">Vidyard</a>, which sells video messaging, had Demand Metric survey more than 600 sales leaders in 2021: more than 70% of reps who send personally recorded video said it raised their response rates. The figures are self-reported. <a href="https://www.sendoso.com/direct-mail-marketing/does-direct-mail-marketing-work" target="_blank" rel="noopener">Sendoso</a>, which sells gifting and direct mail, repeats a marketing-industry claim, credited to Chief Marketer, that direct mail gets more than thirty times the response of email. <a href="https://www.forrester.com/blogs/state-of-business-buying-2024/" target="_blank" rel="noopener">Forrester's 2024 buying survey</a> says buyers want about half of their contact with vendors to be with a person, which supports a human channel without testing one. <a href="https://salesmotion.io/blog/how-to-win-back-ghosted-leads" target="_blank" rel="noopener">Salesmotion</a> puts the channel change on a fixed day as method, not measurement.</p>
+<h3>In other disciplines</h3>
+<p><b>A handwritten note doubled survey returns.</b> Randy Garner ran four studies on surveys sent with and without a handwritten sticky note, published in the <a href="https://myscp.onlinelibrary.wiley.com/doi/abs/10.1207/s15327663jcp1503_8" target="_blank" rel="noopener">Journal of Consumer Psychology in 2005</a>. In one of them, 76% of the surveys with the note came back, against 36% with no note. Across the studies, people with the note also answered faster and more fully. A more personal note helped further when the survey was long and made no difference when it was short. Garner's reading is that the note turns the request into a personal favour.</p>
+<p><b>Visible effort raises what people think a service is worth.</b> Ryan Buell and Michael Norton ran five experiments with travel and dating websites, published in <a href="https://pubsonline.informs.org/doi/10.1287/mnsc.1110.1376" target="_blank" rel="noopener">Management Science in 2011</a>. People preferred a site that showed its search at work, even with a wait, to one that returned the same results instantly. They call it the labor illusion. Seeing the effort made the service seem worth more.</p>
+<p><b>Voter contact ranks the channels.</b> Donald Green and Alan Gerber's <a href="https://www.brookings.edu/books/get-out-the-vote-2/" target="_blank" rel="noopener">Get Out the Vote</a> pulls together decades of field experiments. A conversation at the door produces about one extra vote for every fourteen people reached. Leaflets produce about one for every two hundred. Robocalls and mass email produce close to none. The more human the contact, the more it moved people.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The measured effects are survey returns, website ratings and votes, not deals. The vendor figures for video and mail have no comparison group and come from companies selling the channel. Nobody has tested whether the effect survives once the buyer can tell the effort was automated.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Keep the message and change the medium, once. People respond to effort they can see: a note in someone's hand, a search that visibly works, a person at the door. Whether an automated version keeps that effect is untested, so do not build your follow-up on it.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://salesmotion.io/blog/how-to-win-back-ghosted-leads" target="_blank" rel="noopener">Semir Jahic (Salesmotion)</a></b> <span class="vendor">vendor</span> <span class="meta">· How to Win Back Ghosted Leads: 7 Proven Strategies · 2026 · post</span><div class="note">Salesmotion's win-back sequence puts a change of channel, a call or a LinkedIn message, on a fixed day as a planned step. It is the card's move written into a sequence, as method, not measurement.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://www.vidyard.com/press-releases/sales-teams-using-video-increase-response-rates/" target="_blank" rel="noopener">Vidyard</a></b> <span class="vendor">vendor</span> <span class="meta">· Vidyard Report Reveals Sales Teams Using Video Have Increased Response Rates, Reduced Deal Cycles (State of Virtual Selling survey by Demand Metric) · 2021 · vendor data</span><div class="note">Vidyard, which sells video messaging, reports from a survey of sales leaders that most reps who send personal video said it raised their response rates. The figures are self-reported, with no comparison group, and the card cites them as such.</div></li><li><b><a href="https://www.sendoso.com/direct-mail-marketing/does-direct-mail-marketing-work" target="_blank" rel="noopener">Sendoso</a></b> <span class="vendor">vendor</span> <span class="meta">· Does Direct Mail Marketing Work? · 2024 · vendor data</span><div class="note">Sendoso, which sells gifting and direct mail, repeats a marketing-industry claim that direct mail gets far more responses than email. It is the kind of vendor figure the card cites without relying on it.</div></li><li><b><a href="https://www.forrester.com/blogs/state-of-business-buying-2024/" target="_blank" rel="noopener">Forrester</a></b> <span class="vendor">vendor</span> <span class="meta">· The State Of Business Buying: Companies Still Struggle To Meet Buyer Expectations (blog, December 2024) · 2024 · vendor data</span><div class="note">Forrester's buying survey says buyers want about half of their contact with vendors to be with a person. It supports a human channel without testing one.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://myscp.onlinelibrary.wiley.com/doi/abs/10.1207/s15327663jcp1503_8" target="_blank" rel="noopener">Randy Garner</a></b> <span class="field">consumer psychology</span> <span class="meta">· Post-It Note Persuasion: A Sticky Influence · 2005 · paper</span><div class="note">In four studies, surveys sent with a short handwritten sticky note came back far more often, and more fully, than surveys without one. It is the clearest measurement behind the card's point that people respond to effort they can see.</div></li><li><b><a href="https://pubsonline.informs.org/doi/10.1287/mnsc.1110.1376" target="_blank" rel="noopener">Ryan Buell and Michael Norton</a></b> <span class="field">management science</span> <span class="meta">· The Labor Illusion: How Operational Transparency Increases Perceived Value · 2011 · paper</span><div class="note">In five experiments with travel and dating websites, people preferred a site that showed its search at work, even with a wait, to one that returned the same results at once. It is the evidence that visible effort raises what people think something is worth.</div></li><li><b><a href="https://www.brookings.edu/books/get-out-the-vote-2/" target="_blank" rel="noopener">Donald Green and Alan Gerber</a></b> <span class="field">political science</span> <span class="meta">· Get Out the Vote · 2008 · book</span><div class="note">The authors pull together decades of voter-contact experiments and find that the more human the contact, the more it moved people: a conversation at the door beat leaflets, and robocalls did almost nothing. It is the evidence that a human channel beats an automated one.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0021.html"><b>Go back when something changes on their side</b><span>16 voices</span></a><a class="rel" href="../t/SDL-T-0016.html"><b>Make it easy for a silent buyer to say no</b><span>15 voices</span></a><a class="rel" href="../t/SDL-T-0001.html"><b>Guess what happened. Let them correct you.</b><span>6 voices</span></a></div></section>
+</div>
+</body>
+</html>

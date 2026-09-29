@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When agreed terms get reopened, stop conceding and ask for an answer by a date · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C6">Stall: stuck in the machinery</a></div>
+  <h1 class="serif">When agreed terms get reopened, stop conceding and ask for an answer by a date</h1>
+  <p class="short">When procurement reopens agreed terms, list what they changed, say you are not sure you are the right partner, and give a date. Only for a deal whose terms were already agreed.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>The buyer agreed the terms. Then procurement reopened them, and every new demand has been met with another concession.</p>
+<p>Stop conceding, once. Say out loud what the other side has done since the terms were agreed. Say that a relationship that starts on the wrong terms ends on the wrong terms. Say you no longer know whether you are the right partner. Then give a date for their answer, and go quiet.</p>
+<p>It names no punishment and does not pull the offer. It hands the decision back once, with a date. It is only for a deal whose terms were agreed and then moved, not for a buyer who is still making up their mind.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://www.30mpc.com/newsletter/a-30-second-read-if-youre-still-closing" target="_blank" rel="noopener">Armand Farrokh's $300,000 deal at Pave</a>,</b> told in his 30MPC newsletter of 27 December 2024. He was VP of Sales in his last quarter, and the deal decided whether he hit his forecast in his final report to the board. On 18 December the buyer agreed all terms, and the deal went to the head of procurement for approval. Over the next days procurement backed out of the three-year term, asked at the last second for a price lock, and asked for every premium feature and all future releases. On the final call Farrokh listed those three things back, said his team still wanted to make it work for the sake of the long-term partnership, and named the CEO, customer success leader and board he answers to. Then he said a relationship that starts on the wrong terms ends on the wrong terms, and that if this was not good enough, &quot;I do not know if we're the right partner for you.&quot; He set the date as the end of the year: &quot;I need your answer in 2022.&quot; He sent a text on 30 December. The reply said the deal had just been approved and was in DocuSign.</p>
+<p><b>The smaller version, for a lowball discount request.</b> In <a href="https://www.30mpc.com/newsletter/how-to-win-the-negotiation-before-it-starts" target="_blank" rel="noopener">How To Finish A Negotiation In One Cut</a>, from May 2024, Farrokh calls it faking the walk: &quot;I just know we're too far off.&quot; Then he invites the buyer to agree there is no point taking it back to his team.</p>
+<p><b>Sandler publishes the principle, not the words.</b> The move belongs to what Sandler calls negative reverse selling. <a href="https://uk.sandler.com/whitepapers/negative-reverse-selling" target="_blank" rel="noopener">Its UK whitepaper page</a> describes it as reverse psychology combined with Sandler's questioning technique, and gives only softening statements and short reversing questions. There is no walkaway script.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured it.</b> No study compares sellers who drew a line and set a date with sellers who kept conceding. The only published case is the one above: one deal, told by the seller three years later, with no way to know what procurement would have done if he had said nothing.</p>
+<h3>In other disciplines</h3>
+<p><b>Late and explicit beats early and vague.</b> Marwan Sinaceur and Margaret Neale ran <a href="https://ideas.repec.org/a/spr/grdene/v14y2005i1d10.1007_s10726-005-3876-5.html" target="_blank" rel="noopener">a threat experiment</a>, published in 2005. Participants read the same negotiation, differing only in the threat the other side made: implicit or explicit, early or late, or no threat at all. An early implicit threat and a late explicit one both drew more concessions than the other two versions, and made the person threatening seem less aggressive. The late explicit threat worked better than the late implicit one because it was more believable. Farrokh's move is the late explicit case: he says exactly what he is unsure about, at the end.</p>
+<p><b>A flat threat beats an angry one.</b> Sinaceur, with Gerben van Kleef, Margaret Neale, Hajo Adam and Christophe Haag, ran <a href="https://pubmed.ncbi.nlm.nih.gov/21688880/" target="_blank" rel="noopener">three computer-based negotiation experiments</a>, published in 2011. People received either angry or threatening messages from a simulated opponent. Threats drew bigger concessions than anger, because the person threatening seemed more composed, and the advantage held even when the people receiving the messages had a good alternative. The Pave script is a threat delivered flatly, with no anger in it.</p>
+<p><b>A deadline pulls the answer to the deadline.</b> In Uri Gneezy, Ernan Haruvy and Alvin Roth's <a href="http://stanford.edu/~alroth/papers/2005_GEB_Bargaining_Under.pdf" target="_blank" rel="noopener">bargaining experiments</a>, most agreements came in the final seconds before the deadline; the details are under <a href="SDL-T-0067.html">Get the contract through legal and security</a>.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The experiments used people reading a scenario or bargaining by computer against a simulated opponent over a fixed sum, and every threat was about the terms, never about ending the relationship. Nobody has run a real deal both ways. The deadline research says a date pulls the answer to the last moment, and nothing about whether the answer improves.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Keep it for the deal where agreed terms have been reopened. Say the three or four things the other side actually did, say plainly that you do not know whether you are the right partner, and give a date. In the laboratory, a threat made late, spelled out and delivered flatly moved people more than the same threat left vague at the end, spelled out too early, or delivered in anger. Whether it moves a procurement team is untested, and the one published case is a single deal told by the person who won it.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.30mpc.com/newsletter/a-30-second-read-if-youre-still-closing" target="_blank" rel="noopener">Armand Farrokh</a></b> <span class="meta">· Read if you're still closing deals on December 31st · 2024 · post</span><div class="note">Farrokh tells how, when procurement reopened an agreed deal, he listed what they had changed, said he no longer knew whether his company was the right partner, and asked for an answer by year end; the buyer approved the deal. It is the one published case behind this card, told by the seller who won it.</div></li><li><b><a href="https://www.30mpc.com/newsletter/how-to-win-the-negotiation-before-it-starts" target="_blank" rel="noopener">Armand Farrokh (30 Minutes to President's Club)</a></b> <span class="meta">· How To Finish A Negotiation In One Cut · 2024 · newsletter</span><div class="note">In his newsletter on finishing a negotiation in one cut, Farrokh gives a smaller version for a lowball discount request: say you are just too far off, and invite the buyer to agree there is no point taking it back. It is the card's move at a smaller scale.</div></li><li><b><a href="https://uk.sandler.com/whitepapers/negative-reverse-selling/" target="_blank" rel="noopener">Sandler (UK)</a></b> <span class="meta">· Negative Reverse Selling (white paper page) · post</span><div class="note">Sandler describes negative reverse selling as reverse psychology combined with its questioning technique, with softening statements and short reversing questions. It is the principle behind the card's move, published without a walkaway script.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://ideas.repec.org/a/spr/grdene/v14y2005i1d10.1007_s10726-005-3876-5.html" target="_blank" rel="noopener">Marwan Sinaceur and Neale, Margaret A.</a></b> <span class="field">negotiation research</span> <span class="meta">· Not All Threats are Created Equal: How Implicitness and Timing Affect the Effectiveness of Threats in Negotiations · 2005 · paper</span><div class="note">In a scenario experiment, a threat made late and spelled out drew more concessions than one left vague at the end, and made the person seem less aggressive. It is the shape of the card's move: say exactly what you are unsure about, at the end.</div></li><li><b><a href="https://pubmed.ncbi.nlm.nih.gov/21688880/" target="_blank" rel="noopener">Marwan Sinaceur, van Kleef, Gerben A., Neale, Margaret A., Hajo Adam and Christophe Haag</a></b> <span class="field">negotiation research</span> <span class="meta">· Hot or cold: Is communicating anger or threats more effective in negotiation? · 2011 · paper</span><div class="note">In three negotiation experiments, threats drew bigger concessions than anger, because the person threatening seemed more composed. It is why you deliver the card's line flatly, with no anger in it.</div></li><li><b><a href="http://stanford.edu/~alroth/papers/2005_GEB_Bargaining_Under.pdf" target="_blank" rel="noopener">Uri Gneezy, Ernan Haruvy and Alvin E. Roth</a></b> <span class="field">experimental economics</span> <span class="meta">· Bargaining under a deadline: evidence from the reverse ultimatum game · 2003 · paper</span><div class="note">In bargaining experiments, most agreements came in the final seconds before the deadline. It is why the card gives a date, though the research says nothing about whether the answer improves.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0067.html"><b>Get the contract through legal and security</b><span>16 voices</span></a><a class="rel" href="../t/SDL-T-0080.html"><b>Ask for an exclusive window, with a paid pilot as the stake</b><span>11 voices</span></a><a class="rel" href="../t/SDL-T-0073.html"><b>Trade, don't give</b><span>11 voices</span></a><a class="rel" href="../t/SDL-T-0070.html"><b>Start the paper before the decision</b><span>10 voices</span></a></div></section>
+</div>
+</body>
+</html>

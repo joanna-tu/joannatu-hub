@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guess what happened. Let them correct you. · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C1">Stall: silent, cause unknown</a></div>
+  <h1 class="serif">Guess what happened. Let them correct you.</h1>
+  <p class="short">The wrong map, after the Scharff technique. Instead of asking a silent buyer what went wrong, you write your best reading of their week and let them correct it.</p>
+  <div class="evid"><b>Evidence: studies from another field.</b> Studies in other fields, such as psychology or negotiation, back it. The library applies them to sales.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>Two follow-ups, no reply. A week ago the deal was moving.</p>
+<p>Stop asking what is wrong. Write down what you think happened on their side, in two ordinary sentences, and let them fix it. The proposal is sitting with finance. The agency build ate their month. Then give them one word to answer with.</p>
+<p>A correction is easy to send. &quot;Nothing has happened yet&quot; is not.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://research.utwente.nl/en/publications/eliciting-intelligence-from-sources-the-first-scientific-test-of-/" target="_blank" rel="noopener">The four tactics Granhag's team put in front of participants</a>.</b> A friendly, unhurried manner. No pressing for anything. The impression of already knowing most of it. And claims put to the person to confirm or correct, instead of questions. Participants could not work out which pieces the interviewer was actually after.</p>
+<p><b>The sales version publishes no wording.</b> <a href="https://www.questionbasedselling.com/books/" target="_blank" rel="noopener">Thomas Freese's Question Based Selling</a> builds the same reflex into questions that invite a correction. The method is in the book. Nothing on his site gives you the sentences.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has run it on a buyer.</b> The sales version is <a href="https://www.questionbasedselling.com/books/" target="_blank" rel="noopener">Freese's</a>, method with no measurement behind it. Every experiment below used people who were deliberately holding something back, and a buyer who has gone quiet is usually just busy. Nobody has tested whether the move survives that difference.</p>
+<h3>In other disciplines</h3>
+<p><b>The first controlled test, and what it did not find.</b> Pär Anders Granhag, Steven Oleszkiewicz and Sebastián Cabezas Montecinos published <a href="https://research.utwente.nl/en/publications/eliciting-intelligence-from-sources-the-first-scientific-test-of-/" target="_blank" rel="noopener">the first scientific test of the Scharff technique in Legal and Criminological Psychology in 2015</a>. Ninety-three participants were given information about a planned attack and told to balance giving away too much against giving away too little. On the amount of new information gathered, the Scharff approach did not beat open questions or specific ones. What it changed was what people thought they had done: the Scharff group underestimated how much they had revealed, and the group asked direct questions overestimated it. Hanns Scharff was a Luftwaffe interrogator in the Second World War, known for getting more out of prisoners by telling them what he already knew than by questioning them.</p>
+<p><b>The review across a decade of later experiments.</b> Timothy Luke's <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/acp.3771" target="_blank" rel="noopener">meta-analytic review in Applied Cognitive Psychology</a> gathers the experiments that followed and reports three effects: more new information, an interviewer who comes across as knowing more than they do, and sources who underestimate their own disclosure. The first of those did not appear in the original study. The claim that this move gets you more is carried by the review, not by the experiment people usually cite for it.</p>
+<p><b>The same reflex in police interviewing.</b> Laurence Alison's <a href="https://livrepository.liverpool.ac.uk/3067113/1/The%20ORBIT-victim%20paper.pdf" target="_blank" rel="noopener">ORBIT model</a> deliberately overstates the other person's position so that they correct it.</p>
+<p><b>Why the move ends in a one-word reply.</b> A <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD001175.pub4/full" target="_blank" rel="noopener">Cochrane review of reminders sent to clinicians</a> reports that reminders leaving space for a response do better than bare ones. The size of that difference is not quoted here, because it sits inside the full review and could not be checked against it.</p>
+<p><b>Why you name the next contact and then stop.</b> Mette Trier Damgaard and Christina Gravert measured <a href="https://ideas.repec.org/p/hhs/gunwpe/0650.html" target="_blank" rel="noopener">what reminders cost as well as what they earn</a>: donations rise, and so do unsubscribes. Another message is never free.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>Every participant in these experiments was deliberately guarding something, and a silent buyer is usually just busy. The laboratory effect is on how much information comes back, not on whether anyone decides anything. Nobody has compared a guess against simply asking what is going on.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Send one guess about process, never about what they think of you, and give them a one-word way out. Stop after two. A wrong map invites a correction where an open question invites silence, and that has held across a decade of experiments on people who were hiding something. Whether it works on someone who is merely busy is untested.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.questionbasedselling.com/books/" target="_blank" rel="noopener">Thomas Freese</a></b> <span class="meta">· Question Based Selling · 2000 · book</span><div class="note">Freese's book teaches sellers to ask questions that invite the buyer to correct them. It is the sales version of this card's move, published as a method with no measurement and no sample wording on his site.</div></li><li><b><a href="https://livrepository.liverpool.ac.uk/3067113/1/The%20ORBIT-victim%20paper.pdf" target="_blank" rel="noopener">Laurence Alison (CREST)</a></b> <span class="field">interrogation research</span> <span class="meta">· SONAAR and the ORBIT model · 2016 · post</span><div class="note">Alison's ORBIT model for police interviews deliberately overstates the other person's position so that they correct it. It shows the same reflex this card relies on, taught to investigators instead of sellers.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://research.utwente.nl/en/publications/eliciting-intelligence-from-sources-the-first-scientific-test-of-/" target="_blank" rel="noopener">Granhag, P. A., Oleszkiewicz, S. and Montecinos, S. C.</a></b> <span class="field">interrogation research</span> <span class="meta">· Eliciting intelligence from sources: the first scientific test of the Scharff technique · 2015 · paper</span><div class="note">The authors ran the first controlled test of the Scharff technique, in which the interviewer puts claims to people to confirm or correct instead of asking questions. It is the experiment behind this card's move, though it found no gain in the amount of information, only that people underestimated how much they had given away.</div></li><li><b><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/acp.3771" target="_blank" rel="noopener">Luke, T. J.</a></b> <span class="field">interrogation research</span> <span class="meta">· A meta-analytic review of experimental tests of the interrogation technique of Hanns Joachim Scharff · 2021 · paper</span><div class="note">The review gathers the experiments that followed the first test and finds that the technique draws out more new information, makes the interviewer seem to know more, and leads people to underestimate what they revealed. It is the only source that actually carries the claim that this move gets you more.</div></li><li><b><a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD001175.pub4/full" target="_blank" rel="noopener">Arditi, C., Rege-Walther, M., Durieux, P. and Burnand, B.</a></b> <span class="field">medicine</span> <span class="meta">· Computer-generated reminders delivered on paper to healthcare professionals: effects on professional practice and healthcare outcomes · 2017 · paper</span><div class="note">This review of reminders sent to clinicians reports that reminders which leave space for a reply do better than bare ones. It is the reason the card ends with a one-word way to answer.</div><div class="lim">The library could not check the size of the effect against the full review, so it quotes no figure.</div></li><li><b><a href="https://ideas.repec.org/p/hhs/gunwpe/0650.html" target="_blank" rel="noopener">Damgaard, M. T. and Gravert, C.</a></b> <span class="field">behavioural economics</span> <span class="meta">· The hidden costs of nudging: experimental evidence from reminders in fundraising · 2018 · paper</span><div class="note">In a fundraising field experiment, reminders raised donations and also raised the number of people who unsubscribed. It is why the card stops after two messages: each extra one also costs you people.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0021.html"><b>Go back when something changes on their side</b><span>16 voices</span></a><a class="rel" href="../t/SDL-T-0016.html"><b>Make it easy for a silent buyer to say no</b><span>15 voices</span></a><a class="rel" href="../t/SDL-T-0022.html"><b>Change the channel</b><span>7 voices</span></a></div></section>
+</div>
+</body>
+</html>

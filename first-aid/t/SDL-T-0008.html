@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turn the verbal yes into a one-word confirmation · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C0">Before a stall: triage and prevention</a></div>
+  <h1 class="serif">Turn the verbal yes into a one-word confirmation</h1>
+  <p class="short">Count a spoken yes only after you email the exact terms and they reply to confirm. If no reply comes, you have learned something early.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>The buyer said &quot;we're going ahead&quot; on the call. Three weeks later, nothing is signed and nobody remembers the same terms.</p>
+<p>Treat a spoken yes as nothing yet. Send one short message that spells out the exact terms you believe were agreed, numbers included, and ask them to reply to confirm. The deal exists when the reply arrives, not when the words were said.</p>
+<p>The reply is also the test. If it does not come, you have learned now, not at the end of the quarter, that the yes was softer than it sounded, was not theirs to give, or meant different terms to them. A missing reply is information, not a reason to chase.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://www.ycombinator.com/handshake" target="_blank" rel="noopener">Y Combinator's handshake deal protocol</a>.</b> Written for founders and investors, it is the only published wording of the confirmation. Three steps. The investor says &quot;I'm in.&quot; The founder sends an email or text: &quot;Can you confirm you're in for [offer]?&quot;, with the exact amount and terms. The investor replies yes. Until all three have happened there is no deal. The page rules out a range, such as &quot;$50k to $150k&quot;, which it calls an offer at the bottom of the range plus an expression of interest, and any condition, such as investing only if someone else leads. It suggests both sides send and answer the message on their phones before they part, and treat unwillingness to do so as a warning sign.</p>
+<p><b><a href="https://www.momtestbook.com/" target="_blank" rel="noopener">Rob Fitzpatrick's The Mom Test</a></b> gives the test for whether a yes means anything. A compliment costs nothing, so it tells you nothing. What counts is what the other side gives up: time, such as a next meeting with a clear purpose; reputation, such as an introduction to their boss or a public case study; or money, such as a letter of intent or a deposit. His rule of thumb: if you do not know what happens next after a sales meeting, the meeting was pointless.</p>
+<p>No B2B sales source publishes the confirmation message itself, so the wording you can copy is the investor one above.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured it.</b> No study compares sellers who put a verbal yes in writing and waited for a reply with sellers who did not.</p>
+<p><b>The nearest measurement is whether buyers write back at all.</b> Gong, which sells the software that counts the emails, reported in October 2019 from <a href="https://www.gong.io/blog/the-signal-all-winning-deals-have-in-common" target="_blank" rel="noopener">more than 500,000 emails in live deals</a> that won deals averaged about eight emails a week each way against just under two in deals never signed, and that the gap widened when counting only emails the buyer started. It is a correlation, since a deal going well produces replies, but it is the only sales data on reading a buyer's silence.</p>
+<h3>In other disciplines</h3>
+<p><b>When talk carries information.</b> Joseph Farrell and Matthew Rabin's <a href="https://www.aeaweb.org/articles?id=10.1257/jep.10.3.103" target="_blank" rel="noopener">review of &quot;cheap talk&quot;</a>, in 1996, argues that a statement is believable when the speaker would only say it if it were true, and when saying it gives them a reason to follow through. Where the two sides want different things, talk says less. That is the case for making the yes specific and written, not for distrusting it.</p>
+<p><b>People who write down what they will do mostly do it.</b> In Gary Charness and Martin Dufwenberg's <a href="https://faculty.econ.ucsb.edu/~charness/papers/promises.pdf" target="_blank" rel="noopener">experiments at the University of California, Santa Barbara</a>, published in 2006, the player who had to decide whether to honour the other's trust could first send a written message. Of those who wrote a promise, 79% kept it, against 33% of those who wrote something else or nothing. The players chose whether to promise, so the people who meant to follow through were also the ones who wrote it down, which is exactly the ambiguity a seller faces when a confirmation arrives.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The economics evidence comes from students playing for small sums, whose promises were volunteered rather than requested. Nobody has compared deals where the seller confirmed the verbal yes in writing with deals where they did not. The move is better supported as a way of finding out early than as a way of closing.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Send one message with the exact terms, ask for a reply, and count the deal only when the reply lands. If it does not come, you have your answer early. Whether asking for that reply changes the outcome of a B2B deal has never been tested.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.ycombinator.com/handshake" target="_blank" rel="noopener">Y Combinator</a></b> <span class="field">venture finance</span> <span class="meta">· The Handshake Deal Protocol · 2013 · post</span><div class="note">Y Combinator's protocol for founders and investors counts a spoken yes only after a written message with the exact terms and a reply that confirms it. The card takes its three steps and its message wording from here, because no sales source publishes one.</div></li><li><b><a href="https://www.momtestbook.com/" target="_blank" rel="noopener">Rob Fitzpatrick</a></b> <span class="meta">· The Mom Test · 2013 · book</span><div class="note">Fitzpatrick argues that a yes means something only when the other side gives up time, reputation or money. It is the test the card applies to a spoken yes.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://www.gong.io/blog/the-signal-all-winning-deals-have-in-common" target="_blank" rel="noopener">Devin Reed (Gong Labs)</a></b> <span class="vendor">vendor</span> <span class="meta">· The #1 signal common to all winning sales deals · 2019 · vendor data</span><div class="note">Gong, which sells the software that counts the emails, found that won deals carried far more email in both directions than deals never signed. It is the only sales data on reading a buyer's silence, and it is a correlation, since a deal that is going well produces replies.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://www.aeaweb.org/articles?id=10.1257/jep.10.3.103" target="_blank" rel="noopener">Joseph Farrell and Matthew Rabin</a></b> <span class="field">economics</span> <span class="meta">· Cheap Talk (Journal of Economic Perspectives) · 1996 · paper</span><div class="note">The authors argue that a statement carries information when the speaker would only say it if it were true, and that talk says less when the two sides want different things. It explains why the card asks for the yes to be specific and in writing.</div></li><li><b><a href="https://faculty.econ.ucsb.edu/~charness/papers/promises.pdf" target="_blank" rel="noopener">Charness, Gary and Dufwenberg, Martin</a></b> <span class="field">experimental economics</span> <span class="meta">· Promises and Partnership · 2006 · paper</span><div class="note">In laboratory games, most players who wrote down a promise kept it, far more than players who wrote nothing of the kind. It is the closest test of getting the person who must act to commit in writing, though the players volunteered these promises and nobody asked for them.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0010.html"><b>Earn the next step before you book it</b><span>8 voices</span></a><a class="rel" href="../t/SDL-T-0013.html"><b>Write down why you will lose this deal</b><span>7 voices</span></a><a class="rel" href="../t/SDL-T-0014.html"><b>Review the stalled process together with the buyer</b><span>6 voices</span></a><a class="rel" href="../t/SDL-T-0012.html"><b>Say what worries you, then ask what they think should happen</b><span>5 voices</span></a></div></section>
+</div>
+</body>
+</html>

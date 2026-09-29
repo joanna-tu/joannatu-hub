@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When a renewal goes quiet, start with what they achieved · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C8">Stall: existing-customer dynamics</a></div>
+  <h1 class="serif">When a renewal goes quiet, start with what they achieved</h1>
+  <p class="short">Start 90 to 120 days out, open with the customer's results and next year's goals with everyone who has a say, and go wide when the contact goes silent. In the one B2B renewal study, the last year of service counted most.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>Ninety days to renewal. Your main contact has stopped answering, and usage has gone flat.</p>
+<p>Start earlier than feels necessary, and do not open with the renewal. Open with what the customer has achieved with you. Book a call to go through their results and next year's goals, with everyone who will have a say in the renewal on it, and raise the renewal only after that. If the contact stays silent, go wide: an executive meeting, the people who use the product every day, the usage data, and what has changed inside their company. If your sponsor has left, treat the renewal as a new sale to their successor, as in <a href="SDL-T-0083.html">When your champion leaves, hand the successor the case and the plan</a>.</p>
+<p>With a customer you have things a prospect never gives you: usage data, a contract end date and a relationship. This move uses all three, which is why it is not the silent-buyer email with a renewal date attached.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://info.churnzero.net/hubfs/Best%20Practices/Playbook%20Library%20-%20Renewal%20-%20High-Touch%20Customers.pdf" target="_blank" rel="noopener">ChurnZero's renewal play for its largest customers</a>.</b> Research first: usage, the account's health score, the goals they met. Call and say you want to go through their achievements this year and what next year needs. Confirm by email with the highlights, keeping the detail for the meeting. Run the value call: lead them through what they did and into what they want next, with the decision makers and executive sponsors in the room. Then send an email that says the renewal is coming and books a meeting for it. In that meeting, get the objections out and check that nothing has changed since they first bought. Finish with a thank-you, handwritten if you can. ChurnZero sells customer success software.</p>
+<p><b><a href="https://www.planhat.com/customer-success/renewals" target="_blank" rel="noopener">Planhat's timeline</a>.</b> At 90 days out, review health scores and drops in usage, and agree the renewal plan inside your own company. At 60 days, hold a business review about outcomes, return on investment and next year's goals. At 30 days, do the commercial paperwork. For complex enterprise contracts, start 90 to 120 days out. Planhat sells customer success software.</p>
+<p><b><a href="https://www.clientsuccess.com/resources/5-ways-to-re-engage-when-a-customer-goes-dark" target="_blank" rel="noopener">ClientSuccess's moves for a customer who goes dark</a>,</b> from 2017. Book an executive meeting or visit. Talk to the people who use the product, not only the decision maker. Find out what is happening in their company and their industry. Dig into the account's numbers. And if several customers go quiet at once, change how your team stays in touch. ClientSuccess sells customer success software.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured the play.</b> No study compares renewals worked this way with renewals left to the last month. The three playbooks come from companies that sell customer success software, and none publishes results.</p>
+<p><b>What decides a B2B renewal has been measured.</b> Ruth Bolton, Katherine Lemon and Matthew Bramlett studied <a href="https://doi.org/10.1287/mnsc.1060.0594" target="_blank" rel="noopener">renewals of support contracts for high-tech systems</a> in Germany and the UK, published in 2006. Customers who had a few extremely good service experiences on a contract were more likely to renew it, over and above the average level of service. And customers weighed the experiences of the past year, not earlier ones, when they decided. The last year before the renewal date is the one that counts, which is the case for starting the conversation early and opening with results.</p>
+<h3>In other disciplines</h3>
+<p><b>The customers most likely to leave are not always the ones you can save.</b> Eva Ascarza <a href="https://doi.org/10.1509/jmr.16.0163" target="_blank" rel="noopener">ran two field experiments</a>, with a wireless phone company and a membership organisation, published in 2018. The customers at the highest risk of leaving were not the ones a retention offer moved most. Targeting by who responds to the offer worked better than targeting by who was most likely to leave. For a renewal team, that means watching which quiet accounts react to your first move, and putting the next hour there.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The renewal study is about support contracts for technical systems, and the targeting study is about consumers. Nobody has tested a renewal play against doing nothing, and the playbooks come from vendors who sell the software to run them.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Start 90 to 120 days out, open with the customer's results and next year's goals, and get everyone with a say onto that call before anyone mentions the renewal. When the contact goes quiet, go wide and look at the usage, and put your time into the accounts that respond. In the one B2B study of renewals, the last year of service counted most.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://info.churnzero.net/hubfs/Best%20Practices/Playbook%20Library%20-%20Renewal%20-%20High-Touch%20Customers.pdf" target="_blank" rel="noopener">ChurnZero</a></b> <span class="vendor">vendor</span> <span class="meta">· Playbook: Renewal for your high-touch customers · vendor data</span><div class="note">ChurnZero's renewal play for large customers runs a value call on the year's results with the decision makers before any renewal talk. It is the card's sequence, from a company that sells customer success software.</div></li><li><b><a href="https://www.planhat.com/customer-success/renewals" target="_blank" rel="noopener">Planhat</a></b> <span class="vendor">vendor</span> <span class="meta">· The Complete Guide to B2B Customer Success Renewals: From Reactive to Proactive · 2026 · vendor data</span><div class="note">Planhat's renewal timeline runs from a health review at 90 days through a business review at 60 to the paperwork at 30, starting 90 to 120 days out for complex contracts. It is the card's timing, from a company that sells customer success software.</div></li><li><b><a href="https://www.clientsuccess.com/resources/5-ways-to-re-engage-when-a-customer-goes-dark" target="_blank" rel="noopener">ClientSuccess</a></b> <span class="meta">· 5 Ways to Re-Engage When a Customer Goes Dark · 2017 · post</span><div class="note">ClientSuccess lists five moves for a customer who goes dark, from an executive meeting to talking to the people who use the product. It is the card's advice to go wide, from a company that sells customer success software.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://doi.org/10.1287/mnsc.1060.0594" target="_blank" rel="noopener">Ruth N. Bolton, Katherine N. Lemon and Matthew D. Bramlett</a></b> <span class="meta">· The Effect of Service Experiences over Time on a Supplier's Retention of Business Customers · 2006 · paper</span><div class="note">In a study of support-contract renewals for high-tech systems, a few standout service experiences made renewal more likely, and customers weighed the past year more than earlier ones. It is the case for starting early and opening with results.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://doi.org/10.1509/jmr.16.0163" target="_blank" rel="noopener">Eva Ascarza</a></b> <span class="field">marketing</span> <span class="meta">· Retention Futility: Targeting High-Risk Customers Might be Ineffective · 2018 · paper</span><div class="note">In two field experiments, the customers most likely to leave were not the ones a retention offer moved most, and targeting by who responded worked better. It is why the card puts your time into the quiet accounts that respond.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0097.html"><b>Sell the expansion as the next step, not a new pitch</b><span>3 voices</span></a><a class="rel" href="../t/SDL-T-0096.html"><b>When the customer wants to pay less</b><span>3 voices</span></a><a class="rel" href="../t/SDL-T-0095.html"><b>At renewal, remind them why they chose you</b><span>2 voices</span></a></div></section>
+</div>
+</body>
+</html>

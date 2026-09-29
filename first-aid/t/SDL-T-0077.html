@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quality before price in the evaluation · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C6">Stall: stuck in the machinery</a></div>
+  <h1 class="serif">Quality before price in the evaluation</h1>
+  <p class="short">If you are the better, dearer option, ask for capability to be scored before anyone sees prices. Seeing the price tilted quality scores for students, not for trained procurement officers.</p>
+  <div class="evid"><b>Evidence: study-backed.</b> Studies have tested this kind of move.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>You are the better product and the dearer one. The buyer's panel will score capability and price in one sitting, from one spreadsheet.</p>
+<p>Ask for the evaluation to run in two stages. Capability is scored first, by people who have not seen anyone's price, and the scores are locked. Prices are opened afterwards, and only for suppliers whose capability score cleared a bar agreed in advance. Make the request while the evaluation is still being designed: ask for the scorecard, the weightings and the passing threshold up front, and ask for commercials to travel in a separate document that nobody opens until the scoring is signed off. Public tendering already has a name for this, the two-envelope system.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://www.un.org/Depts/ptd/sites/www.un.org.Depts.ptd/files/files/attachment/page/pdf/pm.pdf" target="_blank" rel="noopener">The United Nations Procurement Manual</a>,</b> revised in June 2024, writes the whole mechanism out. A request for proposals above $150,000 uses two sealed envelopes, one technical and one financial, so that the technical evaluation looks only at the technical proposals. The balance between technical and financial scores is fixed before the request goes out, at 80/20, 70/30, 60/40 or 50/50, and a minimum technical score, normally 60% or 70% of the technical points, is stated in the documents. The financial envelopes stay sealed with the opening committee until the technical evaluation is finished. Only the bids that passed have their prices opened. The rest get their envelopes back unopened.</p>
+<p><b>Nothing is published for the seller's side.</b> No practitioner source gives the words a seller uses to ask a buyer for the split. The nearest published thing is the buyer's rulebook above.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured it.</b> No study compares deals where the seller got the evaluation split with deals where capability and price were scored together.</p>
+<h3>In other disciplines</h3>
+<p><b>Seeing the price tilts the quality scores.</b> Omer Dekel and Amos Schurr named the effect the lower bid bias in <a href="https://doi.org/10.1515/rle-2014-0019" target="_blank" rel="noopener">a 2014 paper in the Review of Law and Economics</a>: evaluators who score the quality of a bid while knowing its price give the cheaper bidder an advantage it has not earned. By the authors' own account in their later paper, 36 procurement officers who sat on tender committees scored two bids for a municipality, one better and dearer than the other. They scored once with prices sealed and again four weeks later with prices visible. With prices visible, they gave the cheaper, weaker bid higher marks for quality. The later paper does not give the size of the shift.</p>
+<p><b>The follow-up, and the result that cuts against the move.</b> Schurr, Dekel and four colleagues ran <a href="https://osf.io/preprints/psyarxiv/9f6ux" target="_blank" rel="noopener">six experiments, published as a working paper in 2020</a>. In the one that isolates price, 82 students and 73 members of bidding committees at a large Israeli government company screened nine bids for electric generators, half of each group seeing prices and half not. Students passed a questionable bid 22% of the time with prices sealed and 46% with prices shown, and a faulty bid 12% against 34%. The professionals barely moved: 21% against 23% on the questionable bid, and 21% against 18% on the faulty one. Asking students to write down a reason for each decision cut their approval of one faulty bid from 60% to 20%.</p>
+<p><b>Hiding one fact during scoring, tested in peer review.</b> Andrew Tomkins, Min Zhang and William Heavlin <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5715744/" target="_blank" rel="noopener">sent each of 500 conference papers</a> to two reviewers who could see the authors' names and two who could not, published in 2017. Reviewers who could see the names were more likely to recommend papers by famous authors, from top universities and from top companies. The hidden fact there is who wrote the paper, not the price, and reviewers are not buyers.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>Every number here comes from Israeli students and procurement officials working simulated tenders on paper, and in the larger study the trained professionals were not swayed by seeing prices at all. Nobody has tested whether asking for the split changes who wins. Where the people scoring you are career procurement professionals, the sequence may buy you nothing.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Ask for the scorecard, the weightings and the passing threshold while the buyer is still designing the evaluation, and ask for commercials to be opened only after the capability scores are signed off. The UN manual gives you published wording to point at. The measured effect is on evaluators who are not procurement professionals, so the ask is worth most when the panel comes from the business side.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.un.org/Depts/ptd/sites/www.un.org.Depts.ptd/files/files/attachment/page/pdf/pm.pdf" target="_blank" rel="noopener">United Nations, Department of Operational Support</a></b> <span class="meta">· United Nations Procurement Manual (DOS/2020.09, revised 30 June 2024) · 2024 · official document</span><div class="note">The UN's manual writes out the two-envelope tender: technical and financial proposals sealed separately, weights and a passing score fixed in advance, and prices opened only for bids that passed. It gives the card published wording to point at, from the buyer's own rulebook.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://doi.org/10.1515/rle-2014-0019" target="_blank" rel="noopener">Omer Dekel and Amos Schurr</a></b> <span class="field">public procurement</span> <span class="meta">· Cognitive Biases in Government Procurement - An Experimental Study · 2014 · paper</span><div class="note">Dekel and Schurr found that procurement officers who saw prices while scoring quality gave the cheaper, weaker bid higher marks, and named this the lower-bid bias. It is the finding this card answers.</div></li><li><b><a href="https://osf.io/preprints/psyarxiv/9f6ux" target="_blank" rel="noopener">Amos Schurr, Omer Dekel, Margarita Leib, Andrea Pittarello, Shaul Shalvi and Simone Moran</a></b> <span class="field">behavioural science</span> <span class="meta">· Qualifying Faults: The Role of Professionalism and Accountability in Bidding Procedures · 2020 · paper</span><div class="note">In the follow-up experiments, students passed faulty bids far more often when they could see prices, while trained procurement staff barely moved. It is why the card's ask is worth most when the panel comes from the business side.</div></li><li><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5715744/" target="_blank" rel="noopener">Andrew Tomkins, Min Zhang and William D. Heavlin</a></b> <span class="field">peer review and evaluation</span> <span class="meta">· Reviewer bias in single- versus double-blind peer review · 2017 · paper</span><div class="note">Reviewers who could see authors' names favoured papers from famous authors and top institutions more than reviewers who could not. It is the cleanest experiment on hiding one fact during scoring, though the fact is authorship, not price.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0067.html"><b>Get the contract through legal and security</b><span>16 voices</span></a><a class="rel" href="../t/SDL-T-0080.html"><b>Ask for an exclusive window, with a paid pilot as the stake</b><span>11 voices</span></a><a class="rel" href="../t/SDL-T-0073.html"><b>Trade, don't give</b><span>11 voices</span></a><a class="rel" href="../t/SDL-T-0070.html"><b>Start the paper before the decision</b><span>10 voices</span></a></div></section>
+</div>
+</body>
+</html>

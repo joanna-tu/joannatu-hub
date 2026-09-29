@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign now, start later · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C5">Stall: no reason to act now</a></div>
+  <h1 class="serif">Sign now, start later</h1>
+  <p class="short">When the buyer wants it but cannot start this quarter, get the contract signed now with the start date written in for later. Borrowed from pension research; nobody has measured it in selling.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>The buyer wants it, but not this quarter. They have other priorities and cannot start until later, so the deal slides into a calendar of check-ins.</p>
+<p>Get the contract signed now, with the start or delivery date written in for later. Ian Koniak, a sales coach, calls this a <a href="https://iankoniak.com/how-to-address-no-budget-or-spending-freeze-objections/" target="_blank" rel="noopener">future-dated order</a> and uses it for exactly this case: a client with competing priorities this quarter who cannot start your project until a later date.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://iankoniak.com/how-to-address-no-budget-or-spending-freeze-objections/" target="_blank" rel="noopener">Koniak's future-dated order</a>.</b> Sign now, deliver later, with the date in the contract. His companion move for cash-flow worries is a split payment: if you normally bill annually, bill half now and half in six months.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured it.</b> Koniak publishes it as practice. Nobody has compared deals signed with a later start date against deals parked until the buyer was ready.</p>
+<h3>In other disciplines</h3>
+<p><b>People commit more easily to a change that starts later.</b> Richard Thaler and Shlomo Benartzi's Save More Tomorrow programme, <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/380085" target="_blank" rel="noopener">published in the Journal of Political Economy in 2004</a>, asked employees who had turned down a higher pension contribution today to commit instead to increases that would start at their next pay rises. Of those who had refused the immediate increase, 78% accepted the later one. Their savings rates rose from 3.5% to 13.6% over forty months. It worked because nothing changed today, and the increase never showed up as a smaller pay cheque.</p>
+<p><b>Why this is the closest comparison available.</b> A buyer who will not sign this quarter is often not refusing the purchase. They are refusing a change that lands now. A signature with a later start date asks for the same kind of commitment as the deferred pension increase.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The evidence is employees committing their own future pay rises. Whether it holds when an organisation commits money that needs someone else's approval is untested.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>When the buyer has no reason to sign now and a good reason to start later, offer a signature that starts on their date. It removes the reason to wait without adding pressure. The evidence for committing now to a change that starts later is strong, and it comes from a very different decision.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://iankoniak.com/how-to-address-no-budget-or-spending-freeze-objections/" target="_blank" rel="noopener">Ian Koniak</a></b> <span class="meta">· How to Address No Budget or Spending Freeze Objections · 2022 · post</span><div class="note">Koniak calls this a future-dated order, signed now with the start date written in for later, for a client whose priorities this quarter will not let them start, and pairs it with a split payment for cash-flow worries. The card's move comes from his post.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://www.journals.uchicago.edu/doi/abs/10.1086/380085" target="_blank" rel="noopener">Richard Thaler and Shlomo Benartzi</a></b> <span class="field">behavioural economics</span> <span class="meta">· Save More Tomorrow: Using Behavioral Economics to Increase Employee Saving · 2004 · paper</span><div class="note">In Save More Tomorrow, most employees who had turned down a higher pension contribution today agreed to increases that would start at their next pay rises, and their savings rose sharply. It is the evidence that people commit more easily to a change that starts later, from a very different decision.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0065.html"><b>Park with a trigger</b><span>13 voices</span></a><a class="rel" href="../t/SDL-T-0019.html"><b>Ask what it would take</b><span>12 voices</span></a><a class="rel" href="../t/SDL-T-0062.html"><b>Find the real compelling event</b><span>10 voices</span></a><a class="rel" href="../t/SDL-T-0098.html"><b>When they wait for their AI strategy, ask what it has to decide</b><span>4 voices</span></a></div></section>
+</div>
+</body>
+</html>

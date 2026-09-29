@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agree how the meeting will end before it starts · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C0">Before a stall: triage and prevention</a></div>
+  <h1 class="serif">Agree how the meeting will end before it starts</h1>
+  <p class="short">Agree at the start of a meeting what it is for, both agendas, the time, and the three acceptable endings: yes, no, or a dated next step. Say out loud that no is fine.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>The meeting ended with &quot;let us think about it&quot;, and you have been waiting ever since.</p>
+<p>Agree how the meeting will end before it starts. At the top of the meeting, both sides say what it is for, what each wants out of it, how long it runs, and which endings count: yes, no, or a next meeting with a date and a purpose. Say out loud that no is a fine answer. Ruling those three in rules &quot;we'll think it over&quot; out, and you ask for the agreement while the buyer can still object to it.</p>
+<p>Sandler Training calls this the up-front contract.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://go.sandler.com/customgrowth/insights/blog/categories/sales-process/the-importance-of-an-up-front-contract/?scLang=en" target="_blank" rel="noopener">Mike Crandall's five parts, on Sandler's site</a>.</b> The purpose of the meeting; the other person's agenda and expectations; your agenda and expectations; the time and logistics; and the outcome, the clear next step both sides leave with. His sample script for an insurance agent thanks the buyer for their time, says both sides will have questions, frames the conversation as deciding whether they are a good fit, says it is fine to say no and that no decision has to be made on the spot, and ends by asking whether all of that is all right.</p>
+<p><b><a href="https://go.sandler.com/chartwellseventeen/insights/blog/categories/sales-process/the-ufc-strategy-5-elements-of-an-up-front-contr/?scLang=en" target="_blank" rel="noopener">David Fischer's three endings, also on Sandler's site</a>.</b> The only acceptable outcomes of a call are yes, the prospect moves forward; no, it is not the right fit; or a defined next meeting with a clear purpose. His openers ask how much time the prospect has set aside and what they see as the main purpose of the call, then say the seller will need to ask about budget and implementation if there is a fit, and ask whether that is acceptable.</p>
+<p><b>The source book.</b> The method comes from David Sandler and David Mattson's <a href="https://www.mheducation.com/highered/mhp/product/you-cant-teach-kid-ride-bike-seminar-2nd-edition-sandler-trainings-7-step-system-successful-selling.html" target="_blank" rel="noopener">You Can't Teach a Kid to Ride a Bike at a Seminar</a>.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured it.</b> No study compares sellers who open meetings with an up-front contract with sellers who do not, and Sandler, which teaches the move and sells the training, publishes method rather than data. Gong's data on discussing next steps in the first meeting, the only measured thing near the last element, is under <a href="SDL-T-0010.html">Earn the next step before you book it</a>.</p>
+<h3>In other disciplines</h3>
+<p><b>Telling people they are free to refuse.</b> In <a href="https://crisp.org.uiowa.edu/sites/crisp.org.uiowa.edu/files/2020-04/5.18.pdf" target="_blank" rel="noopener">Nicolas Guéguen and Alexandre Pascual's 2000 street experiment</a>, 10% of strangers gave bus money when asked plainly and 47.5% when the request added &quot;But you are free to accept or to refuse.&quot; Adrien Fillon and colleagues' <a href="https://open.lnu.se/index.php/metapsychology/article/view/2640" target="_blank" rel="noopener">pre-registered review in Meta-Psychology</a>, co-written with Pascual, pooled 52 experiments and 19,528 people and found a moderate effect overall, stronger face to face. But in the seven studies rated at low risk of bias, the effect was small and not distinguishable from zero. The permission line may help; the best-run studies cannot show that it does.</p>
+<p><b>The word you use to ask what else they want.</b> The second part of the contract asks for the buyer's agenda. John Heritage and colleagues' <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2305862/" target="_blank" rel="noopener">trial with 20 family doctors</a> found that asking for further concerns with the word &quot;something&quot; cut patients' unspoken concerns by about three quarters, while the same question with &quot;anything&quot; did no better than not asking. The full trial is under <a href="SDL-T-0037.html">Schedule the concerns conversation before the close</a>.</p>
+<p><b>Warning people that a pitch is coming.</b> Wendy Wood and Jeffrey Quinn's <a href="https://dornsife.usc.edu/wendy-wood/wp-content/uploads/sites/183/2023/10/Wood.Quinn_.2003_Forewarned_and_forearmed.pdf" target="_blank" rel="noopener">two reviews in Psychological Bulletin</a> found that people told a persuasion attempt was coming leaned towards the coming view beforehand, then resisted once it arrived, most of all on topics that mattered to them. An up-front contract announces that the seller will ask for a decision, so it carries that cost.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>None of this evidence involves a buyer or a purchase: it comes from strangers asked for coins, patients in a consulting room and students rating opinions. Nobody has compared a team that contracts every meeting with the same team that does not. The move rests on its parts, and the best-run studies of the permission line find it close to nothing.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Before the meeting gets going, agree the purpose, both agendas, the time and the three endings you will accept, and say out loud that no is one of them. Ask for their agenda with &quot;something&quot;, not &quot;anything&quot;. Treat the move as a way to get a clear answer; no study shows it wins more deals.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://go.sandler.com/customgrowth/insights/blog/categories/sales-process/the-importance-of-an-up-front-contract/?scLang=en" target="_blank" rel="noopener">Mike Crandall (Sandler)</a></b> <span class="meta">· The importance of an up-front contract · 2021 · post</span><div class="note">Crandall, a Sandler trainer, sets out the five parts of the up-front contract and a sample script that tells the buyer no is a fine answer. The card's structure comes from his article.</div></li><li><b><a href="https://go.sandler.com/chartwellseventeen/insights/blog/categories/sales-process/the-ufc-strategy-5-elements-of-an-up-front-contr/?scLang=en" target="_blank" rel="noopener">David Fischer (Sandler, New York City)</a></b> <span class="meta">· The UFC Strategy: 5 Elements of an Up-Front Contract · 2026 · post</span><div class="note">Fischer, another Sandler trainer, allows only three endings to a call: yes, no, or a defined next meeting with a clear purpose. The card takes its three endings from him.</div></li><li><b><a href="https://www.mheducation.com/highered/mhp/product/you-cant-teach-kid-ride-bike-seminar-2nd-edition-sandler-trainings-7-step-system-successful-selling.html" target="_blank" rel="noopener">David Sandler (Sandler Training)</a></b> <span class="meta">· You Can't Teach a Kid to Ride a Bike at a Seminar: Sandler Training's 7-Step System for Successful Selling · 1995 · book</span><div class="note">David Sandler and David Mattson's book sets out Sandler Training's selling system, including the up-front contract. The card's move is that contract, and Sandler sells the training that teaches it.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://crisp.org.uiowa.edu/sites/crisp.org.uiowa.edu/files/2020-04/5.18.pdf" target="_blank" rel="noopener">Nicolas Guéguen and Alexandre Pascual</a></b> <span class="field">social psychology</span> <span class="meta">· Evocation of Freedom and Compliance: The &quot;But You Are Free Of...&quot; Technique · 2000 · paper</span><div class="note">In a field experiment, strangers asked for bus money gave far more often when the request ended with &quot;But you are free to accept or to refuse.&quot; It is the evidence behind the card's advice to say out loud that no is fine.</div></li><li><b><a href="https://open.lnu.se/index.php/metapsychology/article/view/2640" target="_blank" rel="noopener">Adrien Alejandro Fillon, Lionel Souchet, Alexandre Pascual and Fabien Girandola</a></b> <span class="field">social psychology</span> <span class="meta">· The Effectiveness of the &quot;But-you-are-free&quot; technique: Meta-analysis and re-examination of the technique · 2023 · paper</span><div class="note">This pre-registered review of 52 experiments found a moderate effect of the &quot;but you are free&quot; line overall, and almost none in the best-run studies. It is the check on the card's permission line: it may help, and the strongest studies cannot show that it does.</div></li><li><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2305862/" target="_blank" rel="noopener">John Heritage, Jeffrey D. Robinson, Marc N. Elliott, Megan Beckett and Michael Wilkes</a></b> <span class="field">medicine and physician-patient communication</span> <span class="meta">· Reducing Patients' Unmet Concerns in Primary Care: the Difference One Word Can Make · 2007 · paper</span><div class="note">In a trial with family doctors, asking for further concerns with &quot;something&quot; instead of &quot;anything&quot; cut the concerns patients left unspoken. It is why the card asks for the buyer's agenda with &quot;something&quot;.</div></li></ul><h3>Who says do not</h3><ul class="sources"><li><b><a href="https://dornsife.usc.edu/wendy-wood/wp-content/uploads/sites/183/2023/10/Wood.Quinn_.2003_Forewarned_and_forearmed.pdf" target="_blank" rel="noopener">Wendy Wood and Jeffrey M. Quinn</a></b> <span class="field">social psychology</span> <span class="meta">· Forewarned and Forearmed? Two Meta-Analytic Syntheses of Forewarnings of Influence Appeals · 2003 · paper</span><div class="note">The authors' reviews found that people warned of a coming persuasion attempt resist it once it arrives, most of all on topics that matter to them. It is the cost of this card's move, which tells the buyer up front that you will ask for a decision.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0010.html"><b>Earn the next step before you book it</b><span>8 voices</span></a><a class="rel" href="../t/SDL-T-0013.html"><b>Write down why you will lose this deal</b><span>7 voices</span></a><a class="rel" href="../t/SDL-T-0014.html"><b>Review the stalled process together with the buyer</b><span>6 voices</span></a><a class="rel" href="../t/SDL-T-0012.html"><b>Say what worries you, then ask what they think should happen</b><span>5 voices</span></a></div></section>
+</div>
+</body>
+</html>

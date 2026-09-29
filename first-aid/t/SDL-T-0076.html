@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell to procurement's own scorecard · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C6">Stall: stuck in the machinery</a></div>
+  <h1 class="serif">Sell to procurement's own scorecard</h1>
+  <p class="short">Find out how this buyer's procurement counts a saving, and shape the trade so they can book one their own finance team accepts. Meet them long before the RFP.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>Procurement asks for a discount. You give it, and they come back for more, because a cut off your list price may not count as a saving on their scorecard.</p>
+<p>Procurement is measured on savings, and inside the buying company a saving has a narrower definition than a lower price. A renewal priced below last year's invoices counts one way. A discount off your list price counts another. A service the buyer has never bought before has no baseline at all, so anything agreed on it can only be booked as cost avoidance. Find out which of those categories your deal can honestly fit, and shape the trade so procurement can book a number their own finance team will accept.</p>
+<p>The second half of the move is timing. By the time the RFP arrives, the buyer has already chosen the levers they mean to pull and set the number they have to report. The conversation that decides which saving you are asked for happens long before the negotiation.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://piscari.com/negotiating-with-procurement-ultimate-guide/" target="_blank" rel="noopener">Mike Lander's &quot;When is a saving not a saving?&quot; table</a>,</b> in his guide to negotiating with procurement. It sorts a deal into three columns. A cost saving is a renewal or renegotiation with a lower price for the same volumes, measured against real invoices. Cost avoidance is a discount off a list price or rate card, anything bought for the first time with no baseline, or a smaller price increase from an existing supplier. Value is anything extra thrown in for free, such as licences or implementation support. His point is that a price cut or a freebie can be worth something to the decision maker and still not help procurement hit its own objectives.</p>
+<p><b>The scorecard the table serves.</b> The same guide lists seven things procurement is working on at once: more savings on the deal, better return on investment, access to innovative suppliers, service quality, reliability, sustainability and lower risk. It also lists the levers a buyer has chosen from before you arrive, among them consolidating spend across suppliers, longer commitments in exchange for better prices, and cutting back the specification. His rule for what to trade: find what costs you very little but means a lot to the other side.</p>
+<p><b>The timing.</b> The guide says to start 12 to 24 months before you bid for a big piece of work. <a href="https://una.com/resources/article/translating-for-procurement-and-sales" target="_blank" rel="noopener">Una's write-up of a podcast interview with him</a> puts it at up to 18 months before formal bidding, and quotes him: by the time the RFP is issued, &quot;you're entering the party very late.&quot;</p>
+<p><b>What nobody publishes.</b> No source here gives the words a seller uses to propose one of these structures. What is published is the buyer's own test for what counts.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured it.</b> No study compares deals where the seller shaped the concession to procurement's definition of a saving with deals where the seller simply cut the price, or sellers who met procurement a year early with sellers who met them at the RFP. Lander is a former procurement director who now trains sales teams, and his guide has no measurement attached.</p>
+<p><b>The scorecard is real, and cost avoidance is on it.</b> <a href="https://www.thehackettgroup.com/insights/the-cpo-agenda-2024-procurement-key-issues/" target="_blank" rel="noopener">The Hackett Group's 2024 study of procurement priorities</a> puts cutting spend back at number one, and reports savings forecasts in two separate categories. For price reductions, 40% of organisations expected savings to rise and 27% to fall. For cost avoidance, 35% expected a rise and 22% a fall. Hackett sells procurement benchmarking and advice, and the page gives no sample size.</p>
+<h3>In other disciplines</h3>
+<p><b>People judged on a reported number work to produce the number.</b> Gwyn Bevan and Christopher Hood <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1370980/" target="_blank" rel="noopener">analysed the English NHS target regime in the BMJ in 2006</a>. Against the four-hour target in accident and emergency, hospitals kept patients waiting in ambulances outside until staff were confident of meeting the target. Against the eight-minute ambulance target, the paper reports allegations that ambulance services moved depots from rural to urban areas. Nine hospital trusts had adjusted their waiting lists inappropriately, and three more had deliberately misreported them. That is the mechanism this move relies on, documented in hospitals rather than in buying teams.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The Hackett figures describe what procurement organisations forecast and report, not what happens to a deal when a seller works to those definitions. The target evidence comes from English hospitals, not purchasing. Nobody has compared deals structured to the buyer's savings categories with deals where the seller discounted, so you are reasoning from the buyer's accounting rules, not from a tested play.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Before you move your price, ask how this buyer counts a saving, whether there are past invoices to measure against, and which of the three categories your deal can honestly land in. The evidence shows the scorecard is real and cost avoidance is on it. It does not show the trade works. And if the saving you hand over is a saving only on paper, you have solved procurement's reporting problem and not the buyer's cost problem. Make that choice on purpose.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://piscari.com/negotiating-with-procurement-ultimate-guide/" target="_blank" rel="noopener">Mike Lander (Piscari)</a></b> <span class="meta">· The ultimate guide to negotiating with procurement professionals · post</span><div class="note">Lander, a former procurement director who now trains sales teams, sorts deals into cost savings, cost avoidance and value, and explains that a price cut or a freebie may not count on procurement's scorecard. The card's move comes from here, with no measurement attached.</div></li><li><b><a href="https://una.com/resources/article/translating-for-procurement-and-sales/" target="_blank" rel="noopener">Mackenzie Oakley</a></b> <span class="meta">· Translating for Procurement and Sales (quoting Mike Lander, The Sourcing Hero episode 220) · 2025 · post</span><div class="note">This write-up of a podcast interview quotes Lander saying sellers should meet procurement up to a year and a half before formal bidding, because by the time the RFP is out they are arriving very late. It is the card's timing half.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://www.thehackettgroup.com/insights/the-cpo-agenda-2024-procurement-key-issues/" target="_blank" rel="noopener">Amy Hillcox and Chris Sawchuk (The Hackett Group)</a></b> <span class="vendor">vendor</span> <span class="meta">· The CPO Agenda: 2024 Procurement Key Issues · 2024 · vendor data</span><div class="note">The Hackett Group reports that cutting spend is procurement's top priority, and that procurement teams forecast savings in two categories, price reductions and cost avoidance. It shows the scorecard the card works to is real, from a firm that sells procurement advice, with no sample size given.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1370980/" target="_blank" rel="noopener">Gwyn Bevan and Christopher Hood</a></b> <span class="field">public administration and health policy</span> <span class="meta">· Have targets improved performance in the English NHS? · 2006 · paper</span><div class="note">The authors document how English hospitals judged on targets worked to produce the reported number, sometimes by gaming it. It is the mechanism the card relies on, and a warning, shown in hospitals rather than buying teams.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0067.html"><b>Get the contract through legal and security</b><span>16 voices</span></a><a class="rel" href="../t/SDL-T-0080.html"><b>Ask for an exclusive window, with a paid pilot as the stake</b><span>11 voices</span></a><a class="rel" href="../t/SDL-T-0073.html"><b>Trade, don't give</b><span>11 voices</span></a><a class="rel" href="../t/SDL-T-0070.html"><b>Start the paper before the decision</b><span>10 voices</span></a></div></section>
+</div>
+</body>
+</html>

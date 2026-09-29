@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>After a group call, write to each person separately · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C4">Stall: cannot get it through the organisation</a></div>
+  <h1 class="serif">After a group call, write to each person separately</h1>
+  <p class="short">Write to each person about the thing they reacted to, and tell them all the same story about what the deal is for. Gartner found that tailoring to individuals cut group consensus.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>Six people sat through your demo. Tomorrow you will send one thank-you email to all six.</p>
+<p>Write to each person separately instead, about the thing that person asked about or reacted to, with whatever answers it. Six people who sat through the same demo get six different emails, and one big copied thread becomes several short ones.</p>
+<p>The sceptic gets a message too, and it does not argue. Work out what that person is protecting and speak to that, instead of answering the objection they raised.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://www.fluint.io/post/the-ultimate-mid-funnel-sales-plays-top-5-moves-to-unstick-your-deals" target="_blank" rel="noopener">Nate Nasralla's group demo follow-up at Fluint</a>,</b> from June 2026. It replaces the single thank-you to the whole group. One of his two example lines: &quot;Susan, you perked up at the API integration, here's the documentation.&quot; The other sends the SOC 2 report to the person who asked about security.</p>
+<p><b>Nasralla's sceptic play, in the same post.</b> No wording is published. Treat the sceptic as the most honest person in the deal. Work out what they are protecting, which he lists as budget, time, security or their standing inside the company, and reshape the offer so it serves that instead of threatening it. He says this is a judgement call, not a script.</p>
+<p><b><a href="https://www.linkedin.com/feed/update/urn:li:activity:7376289785398726656/" target="_blank" rel="noopener">Aligned's version, crediting Krysten Conner</a>.</b> Six steps, run before the meeting rather than after: share a deal room with a new stakeholder before you meet them, ask for their input so their priorities are on the agenda, give them context so nothing surprises them, build each relationship on its own, learn each person's decision criteria, and avoid the big copied thread. Aligned sells the deal-room software the first step asks for.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured the move.</b> No study compares individual follow-ups with one email to the group. Fluint says its play came out of patterns across more than 150,000 deal cycles in its own product, and publishes no method, numbers or comparison. Fluint sells the software that produces the plays.</p>
+<p><b>What Gartner measured points the other way.</b> In <a href="https://www.gartner.com/en/newsroom/press-releases/2025-05-07-gartner-sales-survey-finds-74-percent-of-b2b-buyer-teams-demonstrate-unhealthy-conflict-during-the-decision-process" target="_blank" rel="noopener">a survey of 632 B2B buyers</a> in 2024, Gartner found that content tailored to what the buying group had in common raised consensus by 20%, while content tailored to each individual lowered it by 59%. Buyers who got group-level relevance were three times more likely to report a high-quality deal. Delainey Kirkwood of Gartner puts the individual effect down to confirmation bias: each person's own view gets reinforced until the group is less willing to move together. Gartner sells advice to the sales leaders it surveys.</p>
+<p><b>The nearest supporting number is about breadth, not tailoring.</b> <a href="https://www.gong.io/resources/guides/the-data-backed-guide-to-multi-threading-and-team-selling" target="_blank" rel="noopener">Gong states</a> that won deals include 67% more contacts than lost ones, from sales interactions recorded in its product. Gong sells the software that counts the contacts, the comparison is between deals that went well and deals that did not, and it says nothing about whether those contacts were written to one at a time.</p>
+<h3>In other disciplines</h3>
+<p><b>Writing to people about what they told you works, a little.</b> Paul Krebs, James Prochaska and Joseph Rossi <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2939185/" target="_blank" rel="noopener">pooled 88 health programmes</a> that tailored their messages to what each person had reported, on smoking, exercise, diet and mammograms. The effect was small but real, and a little larger when the tailoring was updated as people answered again. Every study was an individual changing their own behaviour, with no group that had to agree.</p>
+<p><b>Hearing out resistance instead of arguing with it.</b> Helen Frost and colleagues' <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0204890" target="_blank" rel="noopener">review of 104 reviews of motivational interviewing</a>, published in 2018, graded most of the evidence low or very low quality. Moderate-quality evidence of a small, mostly short-term benefit appeared for binge drinking, substance misuse and physical activity. None of it involves a person defending a budget inside a company.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The only measurement that speaks to this move is Gartner's, and it asked buyers how relevant content felt, not what happened after per-person emails, so it does not show that individual follow-ups lose deals. The tailoring and interviewing evidence comes from individuals changing their own health habits, where no group has to stay in step.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Write to each person about the thing they reacted to, and tell every one of them the same story about what the deal is for. The one measured finding says relevance aimed at the group raises consensus and relevance aimed at the individual cuts it hard. So personalise what you attach, not the reason to buy. The sceptic half rests on practitioner judgement.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.fluint.io/post/the-ultimate-mid-funnel-sales-plays-top-5-moves-to-unstick-your-deals" target="_blank" rel="noopener">Nate Nasralla (Fluint)</a></b> <span class="vendor">vendor</span> <span class="meta">· The Ultimate Mid-Funnel Sales Plays: Top 5 Moves to Unstick Your Deals · post</span><div class="note">Nasralla's play replaces the single thank-you after a group demo with separate emails about what each person reacted to, and treats the sceptic as the most honest person in the deal. The card's move comes from this post, from a company that sells the software that produces the plays.</div></li><li><b><a href="https://www.linkedin.com/feed/update/urn:li:activity:7376289785398726656/" target="_blank" rel="noopener">Aligned (crediting Krysten Conner)</a></b> <span class="meta">· Multithreading is not more people on calls: a playbook for multi-single-threading · 2025 · post</span><div class="note">Aligned's post, crediting Conner, sets out six steps for building each relationship on its own, ending with avoiding the big copied thread. It is a published version of the card's move, run before the meeting, and its first step uses the deal-room software Aligned sells.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://www.gong.io/resources/guides/the-data-backed-guide-to-multi-threading-and-team-selling" target="_blank" rel="noopener">Gong</a></b> <span class="vendor">vendor</span> <span class="meta">· The data-backed guide to multi-threading and team selling · 2025 · vendor data</span><div class="note">Gong states that won deals include more contacts than lost ones. It is about the breadth of a deal, not about writing to people one at a time, from the vendor that sells the software that counts the contacts.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2939185/" target="_blank" rel="noopener">Paul Krebs, James O. Prochaska and Joseph S. Rossi</a></b> <span class="field">health psychology</span> <span class="meta">· Defining What Works in Tailoring: A Meta-Analysis of Computer-Tailored Interventions for Health Behavior Change · 2010 · paper</span><div class="note">This review of 88 health programmes found a small but real effect from tailoring messages to what each person had reported, a little larger when the programme updated the tailoring. It is the evidence for writing to each person about what they told you, measured on individuals, not groups.</div></li></ul><h3>Who says do not</h3><ul class="sources"><li><b><a href="https://www.gartner.com/en/newsroom/press-releases/2025-05-07-gartner-sales-survey-finds-74-percent-of-b2b-buyer-teams-demonstrate-unhealthy-conflict-during-the-decision-process" target="_blank" rel="noopener">Gartner</a></b> <span class="vendor">vendor</span> <span class="meta">· Gartner Sales Survey Finds 74% of B2B Buyer Teams Demonstrate Unhealthy Conflict During The Decision Process · 2025 · vendor data</span><div class="note">Gartner found that content tailored to what the buying group had in common raised consensus, while content tailored to each individual lowered it sharply. It is why the card personalises what you attach, not the reason to buy, though Gartner measured how relevant content felt, not what per-person emails did.</div></li><li><b><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0204890" target="_blank" rel="noopener">Helen Frost, Pauline Campbell, Margaret Maxwell, Ronan E. O'Carroll, Stephan U. Dombrowski, Brian Williams, Helen Cheyne, Emma Coles and Alex Pollock</a></b> <span class="field">health services research</span> <span class="meta">· Effectiveness of Motivational Interviewing on adult behaviour change in health and social care settings: A systematic review of reviews · 2018 · paper</span><div class="note">This review of reviews of motivational interviewing graded most of the evidence low or very low quality, with small, mostly short-term benefits in a few areas. It is the check on the card's sceptic half, which rests on hearing out resistance instead of arguing with it.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0061.html"><b>The mutual action plan</b><span>15 voices</span></a><a class="rel" href="../t/SDL-T-0058.html"><b>Meet each side alone and carry proposals between them</b><span>12 voices</span></a><a class="rel" href="../t/SDL-T-0059.html"><b>One draft for everyone, and ask what they would change</b><span>10 voices</span></a><a class="rel" href="../t/SDL-T-0044.html"><b>Build the champion first, widen with them</b><span>9 voices</span></a></div></section>
+</div>
+</body>
+</html>

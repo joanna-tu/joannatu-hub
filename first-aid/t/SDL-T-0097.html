@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell the expansion as the next step, not a new pitch · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C8">Stall: existing-customer dynamics</a></div>
+  <h1 class="serif">Sell the expansion as the next step, not a new pitch</h1>
+  <p class="short">Pitch the upgrade as the next step in a working partnership: results, evolving pressures, one hard truth, the cost of standing still, their upside. Propose it inside the window after go-live or after something unexpected happens.</p>
+  <div class="evid"><b>Evidence: vendor data.</b> The main numbers come from a company that sells a product or training for it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>The customer is happy with what they bought. The upgrade you proposed six weeks ago has gone nowhere.</p>
+<p>Present the expansion as the next step in a partnership that is working, not as a new pitch. Start with what you have achieved together. Describe the pressures on their business as a natural evolution, not a sudden threat. Then say, as a partner would, what they are missing today, what it will cost them not to move, and what changes for them if they do. Neither the pure new-customer pitch nor the pure renewal message works here. The expansion needs a bit of both.</p>
+<p>Timing matters as much as the message. Right after a customer goes live, their team is still changing how they work, and a proposal fits into that change. Once the new routine sets, change tends to come only when something unexpected happens or someone discovers something new, so wait for that moment instead of pushing into a settled routine.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://win.corporatevisions.com/rs/413-YED-439/images/Research-Brief-Why-Evolve-Study.pdf" target="_blank" rel="noopener">Corporate Visions' five steps for an upgrade</a>,</b> from its research arm's brief of 2021. Document results: how long you have worked together and what they have achieved. Highlight evolving pressures: changing customer demands and a changing workforce, framed as a natural progression. Share hard truths: in their example, the customer's teams like the software but are frustrated at the time spent pulling data together from different sources. Name the risk of no change: that frustration can cost them staff and customer loyalty. Then the upside, in &quot;you&quot; language: what their team gets from the upgrade, and what it will cost. Corporate Visions sells the messaging training.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>The vendor's upgrade experiment.</b> In the same brief, 426 people imagined being asked by their long-standing software vendor to move from an old on-premise version to a new cloud product, and read one of five messages: a product pitch, the new-customer provocation, the renewal message, a message about what peers were doing, and the partnership message above. The partnership message did best overall, by 4.3% to 5.8%, and on likelihood to buy by 7.8% to 15.7%. The study was run online with Nick Lee of Warwick Business School, for the company that sells the training.</p>
+<p><b>What drives a business customer to upgrade.</b> Ruth Bolton, Katherine Lemon and Peter Verhoef studied <a href="https://doi.org/10.1509/jmkg.72.1.046" target="_blank" rel="noopener">more than 2,000 service contracts</a>, published in 2008. Whether a customer upgraded depended on the decision maker's satisfaction, the service quality on that contract, and price. In the authors' simulations, modest improvements in service on a contract made an upgrade much more likely, and the authors point to particular windows when customers are more open to upgrading.</p>
+<h3>In other disciplines</h3>
+<p><b>The window after go-live.</b> Marcie Tyre and Wanda Orlikowski <a href="https://doi.org/10.1287/orsc.5.1.98" target="_blank" rel="noopener">followed new technology into three manufacturing and service organisations</a>, published in 1994. Users explored and changed the technology in a brief window right after it was introduced. After that, routines set, unresolved problems got built into daily practice, and later changes came in bursts, set off by something unexpected happening or by users discovering something new.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The message evidence is one online simulation run by the vendor that sells the training, with people imagining an upgrade. The go-live window was observed in three organisations adopting production technology decades ago, not software buyers deciding on an expansion. Nobody has compared expansions proposed early, inside that window, with expansions proposed later.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Pitch the expansion as the next step: results first, then the pressures as a natural evolution, one hard truth, the cost of standing still, and their upside in &quot;you&quot; language. Propose it while their team is still changing how it works after go-live, or when something unexpected has happened or a user has found something new. In the one B2B study of upgrades, the service on the contract, the decision maker's satisfaction and the price made the difference.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://win.corporatevisions.com/rs/413-YED-439/images/Research-Brief-Why-Evolve-Study.pdf" target="_blank" rel="noopener">B2B DecisionLabs (Tim Riesterer, Nick Lee, Joe Collins) with Corporate Visions</a></b> <span class="vendor">vendor</span> <span class="meta">· Why Evolve? Researching the Best Approach for Upselling Customers to New Solutions (research brief) · 2021 · vendor data</span><div class="note">In Corporate Visions' online experiment, people imagining an upgrade from their long-standing software vendor responded best to a message framed as the next step in the partnership, over a product pitch, a provocation and a renewal message. It is the card's message and its five steps, from the company that sells the training.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://doi.org/10.1509/jmkg.72.1.046" target="_blank" rel="noopener">Ruth N. Bolton, Katherine N. Lemon and Peter C. Verhoef</a></b> <span class="meta">· Expanding Business-to-Business Customer Relationships: Modeling the Customer's Upgrade Decision · 2008 · paper</span><div class="note">In a study of more than 2,000 service contracts, whether a business customer upgraded depended on the decision maker's satisfaction, the service quality on the contract and the price. It is the measured case for opening with results, and it points to windows when customers are more open to upgrading.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://doi.org/10.1287/orsc.5.1.98" target="_blank" rel="noopener">Marcie J. Tyre and Wanda J. Orlikowski</a></b> <span class="field">organisation science</span> <span class="meta">· Windows of Opportunity: Temporal Patterns of Technological Adaptation in Organizations · 1994 · paper</span><div class="note">The authors found that people adapt new technology in a brief window after an organisation introduces it, after which routines set and change comes only in bursts, set off by something unexpected. It is the evidence behind the card's timing.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0094.html"><b>When a renewal goes quiet, start with what they achieved</b><span>5 voices</span></a><a class="rel" href="../t/SDL-T-0096.html"><b>When the customer wants to pay less</b><span>3 voices</span></a><a class="rel" href="../t/SDL-T-0095.html"><b>At renewal, remind them why they chose you</b><span>2 voices</span></a></div></section>
+</div>
+</body>
+</html>

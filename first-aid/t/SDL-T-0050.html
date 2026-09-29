@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find the person people check with · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C4">Stall: cannot get it through the organisation</a></div>
+  <h1 class="serif">Find the person people check with</h1>
+  <p class="short">Ask several contacts who they check with before they take a view, and brief the name that repeats. Randomised trials in health care back the idea; nothing in selling has tested it.</p>
+  <div class="evid"><b>Evidence: studies from another field.</b> Studies in other fields, such as psychology or negotiation, back it. The library applies them to sales.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>Your champion loves the product. The rest of the buying group has not moved, and you cannot tell whose view they are waiting for.</p>
+<p>Ask several people in the buying organisation who they check with before they take a view on a decision like this one. Then work the name that comes back more than once. Brief that person properly and let them carry the case to their colleagues. The name that repeats is often not your champion, not the most enthusiastic person in the room, and not the person the org chart puts on the decision.</p>
+<p>The move comes from health care research, where the person colleagues consult is called a local opinion leader and is found by asking the colleagues, not by reading the hierarchy. Selling has no published version of the question.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p>No sales source publishes this question, so the published wording comes from health care, where the same step has been run at scale.</p>
+<p><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5381488/" target="_blank" rel="noopener">A nomination survey for chiropractors</a>.</b> André Bussières and colleagues, writing in 2017, describe a questionnaire that asked each person for up to three names of colleagues suited to be opinion leaders, with a reason for each: are they respected as teachers, do they know the subject, do they care about people, and who do they influence. In the first round, 19 of 50 people replied with 80 names, and 21 opinion leaders were chosen. A second round went to 7,200 chiropractors and drew 486 replies.</p>
+<p><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3879216/" target="_blank" rel="noopener">The question a network study asked</a>.</b> Mostafa Shokoohi, Saharnaz Nedjat and Reza Majdzadeh asked 140 medical students in a 400-bed Iranian teaching hospital whom they consulted to solve their problems on diabetic foot care, and drew the network of who checks with whom from the answers.</p>
+<p><b><a href="https://challengerinc.com/the-challenger-customer-profiles/" target="_blank" rel="noopener">Challenger's screen, the nearest thing selling publishes</a>.</b> It sorts buyers into seven profiles and identifies the three it calls Mobilizers by how a person reacts to a new idea, not by what their colleagues say about them. It then publishes the questions a seller puts to that person about what happens when the seller is not there, such as whether the CFO knows about a purchase of this size. It never tells the seller to ask a contact who they check with.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has tested it.</b> No study compares sellers who found and briefed the person a buying group consults with sellers who briefed their most willing contact.</p>
+<p><b>The premise has been measured.</b> John Ronchetto, Michael Hutt and Peter Reingen mapped a buying organisation of 171 people for <a href="https://doi.org/10.1177/002224298905300404" target="_blank" rel="noopener">a 1989 paper in the Journal of Marketing</a> and found that a person's influence on buying decisions came from both the formal structure and the informal one.</p>
+<p><b>The one sales method that picks a person picks them another way.</b> <a href="https://challengerinc.com/the-challenger-customer-profiles/" target="_blank" rel="noopener">Challenger's account of the CEB research</a> describes 700 customer stakeholders assessed on 135 attributes, and states that sellers who target Mobilizers are 31% more likely to be high performers. Challenger sells the training built on that research, and the page gives no sample or comparison for the 31%. The profile is read from how a person responds to the seller, which is a different test from asking their colleagues who they consult.</p>
+<h3>In other disciplines</h3>
+<p><b>The trials.</b> Gerd Flodgren, Mary Ann O'Brien, Elena Parmelli and Jeremy Grimshaw's <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6589938/" target="_blank" rel="noopener">Cochrane review, updated in 2019</a>, pools 24 randomised studies covering more than 3,000 health professionals and 29,167 patients. In the 18 studies behind the headline figure, using local opinion leaders raised the share of care that followed the recommended practice by about 11 percentage points, over a typical follow-up of a year. Whether patients ended up better off is uncertain.</p>
+<p><b>How that compares with the usual alternative.</b> Noah Ivers and colleagues' <a href="https://deptmedicine.utoronto.ca/sites/default/files/assets/files/auditfeedbackiverscochrane12.pdf" target="_blank" rel="noopener">Cochrane review of audit and feedback</a>, which gives professionals data on their own performance, pooled 140 randomised trials and found a typical improvement of about 4 percentage points. The opinion leader figure is roughly two and a half times that. But the two reviews cover different interventions, settings and outcomes, and neither was designed to be compared with the other.</p>
+<p><b>Who the question finds when you ask it.</b> In <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3879216/" target="_blank" rel="noopener">the Iranian hospital study</a>, the students checked with residents, the junior doctors who were around, at least as often as with the senior doctors who outranked them. The difference was not statistically reliable either way.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The 11 points come from clinicians changing prescribing and referral habits under a guideline, not from a buying group choosing a supplier. The review could not tell whether the way opinion leaders were picked mattered, because nearly all the trials picked them the same way. The comparison that matters here, a seller who briefed the consulted person against a seller who briefed the enthusiast, has never been run.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Ask three or four contacts who they check with before they form a view, and spend your preparation on the name that repeats, not on the person who answers fastest. Outside selling, the evidence that this person moves a group is randomised and reasonably strong. Inside selling there is none. Brief them the way the trials used them, as someone who teaches their own colleagues, which means giving them material that works when you are not in the room.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://challengerinc.com/the-challenger-customer-profiles/" target="_blank" rel="noopener">Challenger</a></b> <span class="meta">· The Challenger Customer: Mobilizers, Talkers, and Blockers · 2015 · post</span><div class="note">Challenger's page sorts buyers into seven profiles and picks the Mobilizers by how a person reacts to a new idea. It is the nearest thing sales publishes, and it picks the person a different way: by their reaction to the seller, not by who their colleagues consult.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://doi.org/10.1177/002224298905300404" target="_blank" rel="noopener">John R. Ronchetto, Michael D. Hutt and Peter H. Reingen</a></b> <span class="meta">· Embedded Influence Patterns in Organizational Buying Systems · 1989 · paper</span><div class="note">The authors mapped a buying organisation of 171 people and found that a person's influence on buying decisions came from the informal structure as well as the formal one. It is the measured premise of this card: the org chart does not tell you who moves the group.</div><div class="lim">Only the abstract is free to read.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5381488/" target="_blank" rel="noopener">André Bussières, Michele Maiers, Diane Grondin and Sheilah Brockhusen</a></b> <span class="field">health services research</span> <span class="meta">· Selecting and training opinion leaders and best practice collaborators: experience from the Canadian Chiropractic Guideline Initiative · 2017 · paper</span><div class="note">The authors describe a nomination survey that asked each chiropractor for up to three colleagues suited to be opinion leaders, with reasons. It is the published wording of this card's question, from health care, since no sales source publishes one.</div></li><li><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3879216/" target="_blank" rel="noopener">Mostafa Shokoohi, Saharnaz Nedjat and Reza Majdzadeh</a></b> <span class="field">medical education</span> <span class="meta">· A social network analysis on clinical education of diabetic foot · 2013 · paper</span><div class="note">The authors asked medical students whom they consulted on a clinical problem, and drew the network of who checks with whom from the answers. It shows who the card's question can surface: the students consulted juniors about as often as the senior doctors who outranked them.</div></li><li><b><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6589938/" target="_blank" rel="noopener">Gerd Flodgren, Mary Ann O'Brien, Elena Parmelli and Jeremy M. Grimshaw</a></b> <span class="field">health services research</span> <span class="meta">· Local opinion leaders: effects on professional practice and healthcare outcomes (Cochrane review) · 2019 · paper</span><div class="note">This review of randomised studies found that using local opinion leaders, the colleagues others consult, clearly raised the share of care that followed recommended practice. It is the evidence behind the card's move, from health care, not from selling.</div></li><li><b><a href="https://deptmedicine.utoronto.ca/sites/default/files/assets/files/auditfeedbackiverscochrane12.pdf" target="_blank" rel="noopener">Noah Ivers and colleagues</a></b> <span class="field">health services research</span> <span class="meta">· Audit and feedback: effects on professional practice and healthcare outcomes (Cochrane Database of Systematic Reviews, CD000259.pub3) · 2012 · paper</span><div class="note">This review of 140 trials found that giving professionals data on their own performance brought a typical improvement of about four percentage points. It is the usual yardstick for the opinion-leader result, though nobody built the two reviews to be compared.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0061.html"><b>The mutual action plan</b><span>15 voices</span></a><a class="rel" href="../t/SDL-T-0058.html"><b>Meet each side alone and carry proposals between them</b><span>12 voices</span></a><a class="rel" href="../t/SDL-T-0059.html"><b>One draft for everyone, and ask what they would change</b><span>10 voices</span></a><a class="rel" href="../t/SDL-T-0044.html"><b>Build the champion first, widen with them</b><span>9 voices</span></a></div></section>
+</div>
+</body>
+</html>

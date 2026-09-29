@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask for their advice · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C9">Stall: we caused it</a></div>
+  <h1 class="serif">Ask for their advice</h1>
+  <p class="short">Go back to the silent buyer and ask for their advice on one named problem they know well. Asking made people look more competent in six experiments; nobody has tried it on a stalled deal.</p>
+  <div class="evid"><b>Evidence: studies from another field.</b> Studies in other fields, such as psychology or negotiation, back it. The library applies them to sales.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>The buyer stopped replying after something you did. Another chaser will get the same silence.</p>
+<p>Go back and ask them for their advice. Not for an update or another meeting, but for their view on a problem you name: how to word the business case for their finance team, how to get the security review moving, what to do about the objection their boss raised on the last call. The request puts them in the adviser's seat instead of the defendant's.</p>
+<p>It is one direct question from the person who caused the stall, sent to the buyer personally, not through a sequence. It asks for their words or their judgement, not for a decision.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b>No B2B sales source publishes this move with the words in it.</b> The nearest published wording comes from negotiation and from the laboratory.</p>
+<p><b><a href="https://www.pon.harvard.edu/daily/negotiation-skills-daily/turn-your-adversary-into-your-advocate/" target="_blank" rel="noopener">The Program on Negotiation's three guidelines</a>,</b> from August 2012. Show your general competence first, then ask about one narrow area you are new to. Make the request specific: the article contrasts two real requests to the same consulate officer, a vague &quot;What should I do?&quot;, which got an indifferent answer, and &quot;Can you please advise me on how this letter should be worded?&quot;, which got help line by line. And say why you picked this person, so you look selective rather than asking everyone. The article traces back to <a href="https://www.pon.harvard.edu/news/negotiation-newsletter-reveals-proven-tactic-to-turn-your-adversary-into-your-advocate-during-a-dispute/" target="_blank" rel="noopener">Katie Liljenquist and Adam Galinsky's piece in PON's Negotiation newsletter in June 2007</a>, which is not online.</p>
+<p><b><a href="https://www.hbs.edu/ris/Publication%20Files/Advice%20Seeking_59ad2c42-54d6-4b32-8517-a99eeae0a45c.pdf" target="_blank" rel="noopener">The wording used in the experiments</a>.</b> The whole treatment is a short message: &quot;I hope it went well. Do you have any advice?&quot; against &quot;I hope it went well&quot;, or &quot;Hey there. Do you have any advice?&quot; against a line about being in it together, or small talk about classes.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured it.</b> There is no study of asking for advice in a sales conversation, and no comparison of sellers who asked a stalled buyer for advice with sellers who chased.</p>
+<h3>In other disciplines</h3>
+<p><b>People who ask for advice look more competent, not less.</b> Alison Wood Brooks, Francesca Gino and Maurice Schweitzer ran <a href="https://www.hbs.edu/ris/Publication%20Files/Advice%20Seeking_59ad2c42-54d6-4b32-8517-a99eeae0a45c.pdf" target="_blank" rel="noopener">two pilot studies and six experiments with 1,665 people</a>, published in Management Science in 2015. The fear is real and wrong. In one pilot, 302 online adults predicted they would look clearly less competent if they asked a coworker for advice. In the other, students paid on how competent their partner judged them sent the advice message 32.7% of the time, against 73.5% for students paid on their own performance. The advisers saw it the other way. In the first three experiments, the person who asked for advice was rated more competent than the one who did not, by a small to moderate margin each time. Asking for advice also beat a friendly line and small talk. It changed nothing else: warmth, liking and closeness stayed the same.</p>
+<p><b>Three conditions switch the effect off, from the same paper.</b> The boost appeared only when the task was hard, and vanished, without harm, when it was easy. It appeared only when the person was asked personally: people who watched someone ask a third person rated them no higher than if nobody had asked. And people asked about their own weakest subject rated the asker lower than if they had not asked at all. Asking the wrong person about the wrong thing costs you standing.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>Every number above comes from American students and online workers rating an anonymous partner on puzzles and sums, with a dollar or two at stake and no relationship before or after. Nobody has tried it on a buyer who has stopped replying. And the condition most like a stalled deal, asking about something the other person does not see as their strength, is the one condition where asking made the asker look worse.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Ask the buyer personally, about something they would agree they know well, and name the exact thing you want their words on. Across six experiments, asking for advice did not cost people standing, which is a reason the move is safe, not evidence that it restarts deals. If you cannot say what you want their advice about, you are sending a chaser with better manners.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.pon.harvard.edu/daily/negotiation-skills-daily/turn-your-adversary-into-your-advocate/" target="_blank" rel="noopener">Program on Negotiation at Harvard Law School (PON Staff)</a></b> <span class="field">negotiation</span> <span class="meta">· Turn Your Adversary Into Your Advocate: How to Ask for Advice · 2012 · post</span><div class="note">Harvard's Program on Negotiation gives three guidelines: show your general competence first, make the request specific, and say why you picked this person. They are the card's rules for how to ask.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://www.pon.harvard.edu/news/negotiation-newsletter-reveals-proven-tactic-to-turn-your-adversary-into-your-advocate-during-a-dispute/" target="_blank" rel="noopener">Katie A. Liljenquist and Adam D. Galinsky</a></b> <span class="field">negotiation</span> <span class="meta">· Turn Your Adversary into Your Advocate (Negotiation newsletter, June 2007) · 2007 · newsletter</span><div class="note">Liljenquist and Galinsky's article argues for turning an adversary into an advocate by asking for their advice. It is the published origin of the card's move, in negotiation.</div><div class="lim">The newsletter is not online, so the link goes to the announcement of the issue.</div></li><li><b><a href="https://www.hbs.edu/ris/Publication%20Files/Advice%20Seeking_59ad2c42-54d6-4b32-8517-a99eeae0a45c.pdf" target="_blank" rel="noopener">Alison Wood Brooks, Francesca Gino and Maurice E. Schweitzer</a></b> <span class="field">organisational behaviour</span> <span class="meta">· Smart People Ask for (My) Advice: Seeking Advice Boosts Perceptions of Competence · 2015 · paper</span><div class="note">In six experiments, partners rated people who asked them for advice as more competent, not less, when the task was hard and the request came to them personally. It is the evidence behind the card, with its warning: asking someone about their weak spot made the asker look worse.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0088.html"><b>When your mistake stalled the deal, name it and lead with the fix</b><span>7 voices</span></a></div></section>
+</div>
+</body>
+</html>

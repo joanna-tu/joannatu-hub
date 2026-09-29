@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When they plan to build it with AI, run their own build-or-buy test with them · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C2">Stall: not convinced it matters</a></div>
+  <h1 class="serif">When they plan to build it with AI, run their own build-or-buy test with them</h1>
+  <p class="short">Do not argue they cannot build it. Walk them through their own test: does a product fit, does it touch customer data, payments or certification, who maintains it, is it what makes them different. The library's own move.</p>
+  <div class="evid"><b>Evidence: assembled by the library.</b> Nobody publishes this as one move. The library put it together from parts that are published.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>&quot;Our engineers can build this with AI in a few weeks.&quot; The deal was at the final stage, and now it is a build-or-buy question inside their company, with you outside it.</p>
+<p>Do not argue that they cannot build it. For some tools they can. Walk them through their own build-or-buy test instead. Is there a product that already fits? Does the tool touch customer data or payments, or need a security certification such as SOC 2? Who will maintain it after launch, and what will that cost over three years, including the day its builder leaves? Is this the part of their business that makes them different, or plumbing? Offer to help them scope the build honestly, including the parts they would still buy.</p>
+<p>No seller publishes this move. It is the library's own, using the test that one of the loudest advocates of building publishes for buyers.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b><a href="https://www.saastr.com/dear-saastr-when-should-i-vibe-code-an-app-vs-buy-one" target="_blank" rel="noopener">Jason Lemkin's rule for when to build</a>,</b> from SaaStr in March 2026. Lemkin, who has replaced paid tools with apps he built with AI coding tools, still follows a rule of buying 90% of what you need and building only the 10% no product covers. Build, he says, when no product does the job, when the tool you pay for has fallen so far behind that it hurts the business, or when speed matters more than polish. Buy when well-funded companies do it full time: &quot;You are not going to out-build HubSpot's CRM in a weekend.&quot; And buy when the tool touches customer data, handles payments or needs SOC 2. His warning to himself: &quot;Every app you build is an app you now have to maintain.&quot;</p>
+<p><b><a href="https://www.saastr.com/we-vibe-coded-our-own-ai-vp-of-marketing-and-customer-success-platform-two-vendors-just-lost-20k-each-and-theyll-never-know-why/" target="_blank" rel="noopener">What it looks like from the vendor's side</a>.</b> Lemkin describes building his own marketing and customer success tools, which cost two vendors about $20,000 a year each in business they never got. &quot;Those vendors will never know we existed,&quot; he writes, because a deal that never closes never shows up in anyone's churn data.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has tested the move.</b> No study compares sellers who walked a buyer through their own build test with sellers who argued against building.</p>
+<p><b>The stall is common and growing.</b> McKinsey's <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">survey of 1,719 people in 97 countries</a>, published in August 2026, found that 32% said their organisation had decided against buying at least one software product or feature because it could build it with AI coding tools. <a href="https://www.gong.io/trends" target="_blank" rel="noopener">Gong's trend data</a>, from 33.5 million deals since February 2024, shows deals where a buyer mentions building internal AI systems to replace third-party software up by 45%. McKinsey sells AI consulting, and Gong sells the software that tracks the mentions.</p>
+<p><b>When enterprises actually decide, most buy.</b> <a href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/" target="_blank" rel="noopener">Menlo Ventures surveyed 495 US enterprise AI decision makers</a> in November 2025. They bought 76% of their AI use cases rather than building them, up from 53% a year earlier. Menlo's explanation is that ready-made products reached production faster. Menlo also reports that 47% of AI deals reached production, against 25% for traditional software. Menlo invests in AI companies that sell to these buyers.</p>
+<h3>In other disciplines</h3>
+<p><b>People overvalue what they build themselves.</b> Michael Norton, Daniel Mochon and Dan Ariely <a href="https://www.hbs.edu/ris/Publication%20Files/11-091.pdf" target="_blank" rel="noopener">found in four studies</a> that people who assembled a storage box, folded origami or built Lego valued their own work far above what others would pay, and saw their amateur results as close to an expert's. The effect disappeared when they failed to finish. It was measured on finished things, so it speaks to how a team will value its tool once built, not to the plan.</p>
+<p><b>People underestimate how long it will take.</b> Roger Buehler, Dale Griffin and Michael Ross <a href="https://doi.org/10.1037/0022-3514.67.3.366" target="_blank" rel="noopener">asked 37 students</a>, published in 1994, how long their final-year thesis would take. They predicted about 34 days on average and took about 56, longer even than their own worst-case guess of about 49. Only about 30% finished by the date they had predicted.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The survey figures describe what companies did or said, not what a seller's questions change. The overvaluation and planning studies used students and consumers building small things, not engineering teams building software. And Lemkin's own experience cuts both ways: he did replace two vendors.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>Do not argue that they cannot build it. Walk them through their own test: does a product fit, does it touch customer data, payments or certification, who maintains it for three years, and is it the part that makes them different. Where the answer really is build, let that part go and sell the rest. When enterprises decided in 2025, most bought, and the research says people overvalue what they have built and underestimate how long building takes.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.saastr.com/dear-saastr-when-should-i-vibe-code-an-app-vs-buy-one" target="_blank" rel="noopener">Jason Lemkin (SaaStr)</a></b> <span class="meta">· Dear SaaStr: When should I vibe code an app vs buy one? · 2026 · post</span><div class="note">Lemkin, who builds some of his own tools with AI, still buys most of what he needs, builds only what no product covers, and says to buy anything that touches customer data, payments or security certification. It is the build-or-buy test the card walks the buyer through.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://www.saastr.com/we-vibe-coded-our-own-ai-vp-of-marketing-and-customer-success-platform-two-vendors-just-lost-20k-each-and-theyll-never-know-why/" target="_blank" rel="noopener">Jason Lemkin (SaaStr)</a></b> <span class="meta">· We Vibe Coded Our Own AI VP of Marketing and Customer Success Platform. Two Vendors Just Lost $20k+ Each. And They'll Never Know Why. · 2026 · post</span><div class="note">Lemkin describes building his own marketing and customer success tools, which cost two vendors business they will never see in their churn data. It is the card's reminder that sometimes the buyer really can build it.</div></li><li><b><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">Dan Tinkoff, Lieven Van der Veken and Michael Chui, with Tara Balakrishnan (McKinsey)</a></b> <span class="vendor">vendor</span> <span class="meta">· The state of AI in 2026: On the road to ROI · 2026 · vendor data</span><div class="note">McKinsey's survey found that about a third of organisations had decided against buying at least one software product because they could build it with AI coding tools. It shows how common the card's stall has become, from a firm that sells AI consulting.</div></li><li><b><a href="https://www.gong.io/trends" target="_blank" rel="noopener">Gong Labs</a></b> <span class="vendor">vendor</span> <span class="meta">· Gong Labs Trends · 2026 · vendor data</span><div class="note">Gong's trend data shows buyers mentioning building their own AI systems to replace bought software far more often since 2024. It shows the stall is growing, from a vendor that reports only the rise.</div></li><li><b><a href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/" target="_blank" rel="noopener">Menlo Ventures</a></b> <span class="vendor">vendor</span> <span class="meta">· 2025: The State of Generative AI in the Enterprise · 2025 · vendor data</span><div class="note">Menlo Ventures' survey of enterprise AI buyers found that in 2025 they bought most of their AI uses instead of building them, a larger share than a year earlier. It is the evidence that when enterprises actually decide, most buy, from an investor in AI companies.</div></li></ul><h3>From other disciplines</h3><ul class="sources"><li><b><a href="https://www.hbs.edu/ris/Publication%20Files/11-091.pdf" target="_blank" rel="noopener">Michael I. Norton, Daniel Mochon and Dan Ariely</a></b> <span class="field">psychology and consumer behaviour</span> <span class="meta">· The &quot;IKEA Effect&quot;: When Labor Leads to Love (Harvard Business School working paper 11-091) · 2011 · paper</span><div class="note">People who assembled a box, folded origami or built Lego valued their own work far above what others would pay. It is why a team may overvalue a tool it built, though the studies measured finished things, not plans.</div></li><li><b><a href="https://doi.org/10.1037/0022-3514.67.3.366" target="_blank" rel="noopener">Roger Buehler, Dale Griffin and Michael Ross</a></b> <span class="field">psychology</span> <span class="meta">· Exploring the 'planning fallacy': Why people underestimate their task completion times · 1994 · paper</span><div class="note">Students writing a thesis took far longer than they predicted, longer even than their own worst-case guess. It is why the card asks who will maintain the build and what it will really cost.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0024.html"><b>Build the business case with the buyer, including the cost of doing nothing</b><span>9 voices</span></a><a class="rel" href="../t/SDL-T-0025.html"><b>Teach them something that reframes the problem</b><span>6 voices</span></a><a class="rel" href="../t/SDL-T-0028.html"><b>Find the bright spot inside the account</b><span>5 voices</span></a><a class="rel" href="../t/SDL-T-0031.html"><b>Change what happens if they do nothing</b><span>4 voices</span></a></div></section>
+</div>
+</body>
+</html>

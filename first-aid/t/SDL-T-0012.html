@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Say what worries you, then ask what they think should happen · Stalled Deal Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF5E6; --ink:#171717; --muted:#6B6660; --green:#10604D; --terra:#C74329; --sage:#DBEDC4; --sageink:#2F5A1F; --card:#FFFDF7; --line:#E8E0CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:17.5px; line-height:1.6; }
+  a { color:inherit; text-decoration:none; } a:hover { color:var(--terra); }
+  .serif { font-family:"Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight:400; letter-spacing:-0.02em; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 28px 90px; }
+  .top { display:flex; justify-content:space-between; align-items:center; padding:18px 0; font-size:14px; color:var(--muted); }
+  .top a { border-bottom:1px solid var(--line); } .top b { color:var(--ink); }
+  .kicker { font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--terra); margin:44px 0 14px; }
+  h1 { font-size:clamp(40px, 6vw, 62px); line-height:1; margin:0 0 16px; }
+  .short { font-size:21px; line-height:1.45; color:var(--muted); margin:0 0 44px; }
+  .kicker a { border-bottom:1px solid #EBC3B8; } .kicker a:hover { color:#9c2f1b; border-bottom-color:currentColor; }
+  .evid { font-size:15.5px; line-height:1.5; background:var(--sage); color:var(--sageink); border-radius:14px; padding:10px 16px; margin:-22px 0 44px; }
+  .evid b { font-weight:700; }
+  section { margin:0 0 44px; }
+  h2.serif { font-size:34px; line-height:1.05; margin:0 0 12px; }
+  p { margin:0 0 14px; }
+  ol.steps { list-style:none; padding:0; margin:6px 0 0; counter-reset:s; }
+  ol.steps li { counter-increment:s; display:grid; grid-template-columns:64px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline; }
+  ol.steps li::before { content:counter(s); font-family:"Instrument Serif", Georgia, serif; font-size:44px; line-height:.9; color:var(--terra); }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  .tested ol.steps li::before { content:""; display:none; }
+  .tested ol.steps li { grid-template-columns:1fr; }
+  .tested h3 { margin:26px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  .tested h2 + h3 { margin-top:6px; padding-top:0; border-top:0; }
+  .looks { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px 12px; }
+  .looks p { margin:0 0 16px; }
+  .gap { background:#F7E8C8; color:#6b4708; border-radius:20px; padding:24px 28px 12px; }
+  .gap h2 { font-size:24px; opacity:.85; }
+  .gap h2 { color:#6b4708; }
+  .case { border-left:3px solid var(--sage); padding:2px 0 2px 18px; margin:0 0 18px; }
+  .takeaway { background:var(--green); color:var(--paper); border-radius:20px; padding:28px 30px 16px; }
+  .takeaway h2 { color:var(--paper); font-size:24px; opacity:.85; } .takeaway p { font-family:"Instrument Serif", Georgia, serif; font-size:27px; line-height:1.25; letter-spacing:-0.01em; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:18px 0 6px; }
+  ul.sources { list-style:none; padding:0; margin:0; } ul.sources li { padding:8px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  ul.sources .meta { color:var(--muted); font-size:14px; } ul.sources .note { color:#33312d; font-size:14.5px; line-height:1.55; margin-top:4px; }
+  ul.sources .lim { color:#8a5300; font-size:13px; margin-top:3px; }
+  ul.sources .why { color:#8a5300; font-size:13.5px; margin-top:3px; }
+  ul.sources a { border-bottom:1px solid var(--line); } ul.sources a:hover { border-bottom-color:var(--terra); }
+  .vendor { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:#EFE9DA; color:var(--muted); margin-left:6px; }
+  .field { font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:1px 6px; border-radius:999px; background:var(--sage); color:var(--sageink); margin-left:6px; }
+  .related { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rel { display:block; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; transition:transform .18s ease, box-shadow .18s ease; }
+  .rel:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(23,23,23,.07); color:var(--ink); }
+  .rel b { display:block; font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:21px; line-height:1.15; letter-spacing:-0.01em; }
+  .rel span { font-size:13px; color:var(--muted); }
+  footer { padding:40px 0 90px; color:var(--muted); font-size:13px; }
+  @media (max-width:640px) { .related { grid-template-columns:1fr; } ol.steps li { grid-template-columns:44px 1fr; } ol.steps li::before { font-size:32px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><a href="../library.html">← All moves</a> · <a href="../">First aid card</a></span><b>Stalled Deal Library</b></div>
+  <div class="kicker"><a href="../index.html#causes/C0">Before a stall: triage and prevention</a></div>
+  <h1 class="serif">Say what worries you, then ask what they think should happen</h1>
+  <p class="short">When something on a call does not add up, say &quot;I have a concern&quot;, say what it is, and ask the buyer what they think should happen next. Have your own recommendation ready in case they ask you back.</p>
+  <div class="evid"><b>Evidence: documented practice.</b> Sellers and trainers publish how they do it. No study has tested it.</div>
+  <section class="what"><h2 class="serif">What it is.</h2><p>Something on the call does not add up. The answer is vague, the date slides, the person you asked for does not turn up, the voice goes flat.</p>
+<p>Say what you noticed, out loud, in the meeting, instead of carrying on and hoping. Then ask the buyer what they think should happen about it, instead of answering it for them. The second half is harder, because it means giving up the explanation you had already built in your head. Mahan Khalsa and Randy Illig, who ran FranklinCovey's sales practice, call the signal a yellow light.</p></section><section class="looks"><h2 class="serif">What it looks like.</h2><p><b>Khalsa and Illig's three steps.</b> Their book, <a href="https://www.penguinrandomhouse.com/books/303084/lets-get-real-or-lets-not-play-by-mahan-khalsa/" target="_blank" rel="noopener">Let's Get Real or Let's Not Play</a>, is not online. <a href="https://sellingsherpa.com/index.php/2021/01/18/lets-get-real-or-lets-not-play-book-summary/" target="_blank" rel="noopener">Jeremy Donovan's summary</a> quotes the rule, &quot;If you see it, hear it, or feel it, find a way to say it&quot;, tactfully, and defines a yellow light as &quot;doubts, stalls, concerns, fears, objections, or tough questions&quot;, raised by either side. The response has three parts: say &quot;I have a concern&quot;; state the concern, the confusion or the possible problem; and ask what they think should happen next. If the concern is about something you cannot do, the follow-up is &quot;What would have to happen…?&quot;, not &quot;What would I have to do…?&quot; <a href="https://ir.franklincovey.com/news-releases/news-release-details/sales-challenges-any-economy-addressed-new-book-franklincovey/" target="_blank" rel="noopener">FranklinCovey's announcement of the book</a> adds the authors' rule that sellers should not guess what problem the client is trying to solve.</p>
+<p><b>The spoken version.</b> On <a href="https://top1.fm/DailySalesTips/sales-tip-1159-navigate-traffic-lights-jennifer-colosimo/" target="_blank" rel="noopener">episode 1159 of the Daily Sales Tips podcast</a> in March 2022, Jennifer Colosimo, then president of FranklinCovey's enterprise division, gives three steps for a concern the buyer has raised: acknowledge, understand, then resolve if possible. Her acknowledgement opens with &quot;a genuine thank you for raising that concern&quot;, suggests slowing down to talk about it, thanks the buyer for being upfront, and asks permission to ask a few questions to understand it. Acknowledging, she adds, is not agreeing.</p></section>
+  <section class="tested"><h2 class="serif">Where it has been tested.</h2><h3>In B2B sales</h3>
+<p><b>Nobody has measured the move.</b> No study compares sellers who name a hesitation and hand the decision back with sellers who press on and guess. What good sellers do once an objection is on the table, pause longer and ask rather than launch into a monologue, is Gong's finding under <a href="SDL-T-0033.html">When the buyer keeps asking for more, ask what it is for</a>.</p>
+<p><b>The biggest sales dataset cuts against the second half.</b> Matthew Dixon and Ted McKenna report on <a href="https://www.jolteffect.com/blog/what-is-the-jolt-effect" target="_blank" rel="noopener">their book site</a>, from more than 2.5 million recorded calls analysed on the platform of Tethr, <a href="https://www.prnewswire.com/news-releases/tethr-announces-joltrx-conversation-intelligence-dashboard-to-analyze-sales-conversations-301626831.html" target="_blank" rel="noopener">which sells the analysis software</a>, that 56% of deals lost to indecision were lost to the buyer's fear of getting it wrong. Their answer for a hesitant buyer is to offer your own recommendation rather than more questions and choices. They sell the training built on it and never tested Khalsa's question, but it means some buyers will answer &quot;what do you think should happen?&quot; with &quot;what would you do?&quot;, and you need that answer ready.</p>
+<h3>In other disciplines</h3>
+<p>Every piece of evidence behind this move lives in another entry, because each supports several moves. The wording that gets unspoken concerns said, &quot;something&quot; rather than &quot;anything&quot;, is under <a href="SDL-T-0037.html">Schedule the concerns conversation before the close</a>. The experiments on raising the damaging fact yourself, before the other side does, are under <a href="SDL-T-0040.html">Volunteer the bad news yourself</a>. The evidence on telling people they are free to refuse, and how weak it is in the best-run studies, is under <a href="SDL-T-0009.html">Agree how the meeting will end before it starts</a>. And the finding that asking for someone's view makes you look more competent, not less, is under <a href="SDL-T-0093.html">Ask for their advice</a>.</p></section>
+  <section class="gap"><h2 class="serif">Caveat.</h2><p>The published versions handle a concern the buyer has already voiced; nobody has measured a seller naming something the buyer has not said. The supporting evidence comes from patients, mock jurors and students, and the one large sales dataset on hesitant buyers says to recommend a path rather than ask them to choose one.</p></section>
+  <section class="takeaway"><h2 class="serif">Takeaway.</h2><p>When something does not add up, say &quot;I have a concern&quot;, say what it is, and ask what they think should happen next. Expect a hesitant buyer to hand the question back, and have your own recommendation ready when they do. The naming half rests on better ground than the handing-back half.</p></section>
+  <section><h2 class="serif">Sources.</h2><h3>Recommended by</h3><ul class="sources"><li><b><a href="https://www.penguinrandomhouse.com/books/303084/lets-get-real-or-lets-not-play-by-mahan-khalsa/" target="_blank" rel="noopener">Mahan Khalsa and Randy Illig</a></b> <span class="meta">· Let's Get Real or Let's Not Play: Transforming the Buyer/Seller Relationship · 2008 · book</span><div class="note">Khalsa and Illig, who ran FranklinCovey's sales practice, teach sellers to say out loud any doubt, stall or concern they notice, which they call a yellow light. The card's move is their three-step response to it.</div></li><li><b><a href="https://sellingsherpa.com/index.php/2021/01/18/lets-get-real-or-lets-not-play-book-summary/" target="_blank" rel="noopener">Jeremy Donovan</a></b> <span class="meta">· Let's Get Real or Let's Not Play (Book Summary) · 2021 · post</span><div class="note">Donovan's summary quotes the yellow-light rule and the three-part response: say &quot;I have a concern&quot;, state it, and ask what they think should happen next. The card's wording comes from here, second hand, because the book is not online.</div></li><li><b><a href="https://ir.franklincovey.com/news-releases/news-release-details/sales-challenges-any-economy-addressed-new-book-franklincovey/" target="_blank" rel="noopener">FranklinCovey</a></b> <span class="vendor">vendor</span> <span class="meta">· Sales Challenges in Any Economy Addressed in New Book by FranklinCovey Sales Performance Experts About Making Selling a Win-Win Process (press release, quotation) · 2009 · vendor data</span><div class="note">FranklinCovey's announcement of the book names the yellow-light chapter and the authors' rule that sellers should not guess what problem the client is trying to solve. It is the rule behind the card's second half: ask, do not guess.</div></li><li><b><a href="https://top1.fm/DailySalesTips/sales-tip-1159-navigate-traffic-lights-jennifer-colosimo/" target="_blank" rel="noopener">Jennifer Colosimo (on Scott Ingram's Daily Sales Tips)</a></b> <span class="meta">· Sales Tip 1159: Navigate Traffic Lights · 2022 · podcast</span><div class="note">Colosimo, then president of FranklinCovey's enterprise division, teaches the spoken version: acknowledge the concern, understand it, then resolve it if you can. The card uses her wording for acknowledging a concern without agreeing with it.</div></li></ul><h3>B2B sales research and data</h3><ul class="sources"><li><b><a href="https://www.prnewswire.com/news-releases/tethr-announces-joltrx-conversation-intelligence-dashboard-to-analyze-sales-conversations-301626831.html" target="_blank" rel="noopener">Tethr</a></b> <span class="vendor">vendor</span> <span class="meta">· Tethr announces JOLTRx, conversation intelligence dashboard to analyze sales conversations · 2022 · vendor data</span><div class="note">Tethr's announcement of its JOLT dashboard shows that the JOLT research ran on Tethr's own platform. Tethr sells that software, which is the conflict of interest behind the JOLT finding this card cites.</div></li></ul><h3>Who says do not</h3><ul class="sources"><li><b><a href="https://www.jolteffect.com/blog/what-is-the-jolt-effect" target="_blank" rel="noopener">Matthew Dixon and Ted McKenna</a></b> <span class="meta">· What is the JOLT Effect? Everything You Need To Know · 2022 · post</span><div class="note">The authors report that most deals lost to indecision were lost to the buyer's fear of getting it wrong, and that the answer is to recommend a path, not to offer more choices. It cuts against the card's second half, which is why you need your own recommendation ready when the buyer asks you back.</div></li></ul></section>
+  <section><h2 class="serif">Related moves.</h2><div class="related"><a class="rel" href="../t/SDL-T-0010.html"><b>Earn the next step before you book it</b><span>8 voices</span></a><a class="rel" href="../t/SDL-T-0013.html"><b>Write down why you will lose this deal</b><span>7 voices</span></a><a class="rel" href="../t/SDL-T-0014.html"><b>Review the stalled process together with the buyer</b><span>6 voices</span></a><a class="rel" href="../t/SDL-T-0008.html"><b>Turn the verbal yes into a one-word confirmation</b><span>5 voices</span></a></div></section>
+</div>
+</body>
+</html>
